@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bbPLI0j0aWNPAYOCbaIIe3gaQArlLeN+/Dw0VB7XT1S1zB/OsDAN1NylZbMeaY+v6mmh4ZeVm1bxL9WGLQNXzQ==",
+  "success": true,
+  "projectFilePath": "D:\\GitHubRep\\yugiohCardManager\\Test\\TestApi\\TestApi\\TestApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

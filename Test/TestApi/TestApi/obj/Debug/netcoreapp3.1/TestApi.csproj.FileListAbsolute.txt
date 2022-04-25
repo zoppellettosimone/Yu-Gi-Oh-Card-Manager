@@ -1,0 +1,16 @@
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.exe
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.deps.json
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.runtimeconfig.json
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.runtimeconfig.dev.json
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.dll
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\TestApi.pdb
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.csproj.AssemblyReference.cache
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.AssemblyInfoInputs.cache
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.AssemblyInfo.cs
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.csproj.CoreCompileInputs.cache
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.csproj.CopyComplete
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.dll
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.pdb
+D:\GitHubRep\yugiohCardManager\Test\TestApi\TestApi\obj\Debug\netcoreapp3.1\TestApi.genruntimeconfig.cache

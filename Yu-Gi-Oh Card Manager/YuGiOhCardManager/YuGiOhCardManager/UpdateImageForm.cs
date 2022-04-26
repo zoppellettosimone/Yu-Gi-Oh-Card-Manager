@@ -23,6 +23,8 @@ namespace YuGiOhCardManager
         public const int HT_CAPTION = 0x2;
         #endregion Move Form
 
+        ManualResetEvent MRE = new ManualResetEvent(false);
+
         List<Dictionary<string, object>> apiResList = new List<Dictionary<string, object>>();
 
         DirectoryInfo d = new DirectoryInfo("..\\..\\..\\..\\..\\pics");
@@ -38,7 +40,13 @@ namespace YuGiOhCardManager
 
             apiResList = apiToCopy;
 
+            MRE.Reset();
+
             int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+            if(nrFile < 0)
+            {
+                nrFile = 0;
+            }
 
             if (nrFile > 0)
             {
@@ -50,13 +58,14 @@ namespace YuGiOhCardManager
             }
 
             nrImageLabel.Text = $"You have {nrFile} image to Download";
-            timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 10.1)} sec to wait";
+            timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 5.1)} sec to wait";
 
             wf.Close();
         }
 
         private void closeAllButton_Click(object sender, EventArgs e)
         {
+            MRE.Set();
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -86,6 +95,10 @@ namespace YuGiOhCardManager
             nrImageLabel.Refresh();
 
             updateImageButton.Enabled = false;
+            updateImageButton.Refresh();
+
+            downloadPanel.Visible = true;
+            downloadPanel.Refresh();
 
             Thread t1 = new Thread(() =>
             {
@@ -95,6 +108,10 @@ namespace YuGiOhCardManager
                     if (d.GetFiles(item["imageId"].ToString() + ".jpg").Length == 0)
                     {
                         int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+                        if (nrFile < 0)
+                        {
+                            nrFile = 0;
+                        }
 
                         if (InvokeRequired)
                         {
@@ -110,8 +127,8 @@ namespace YuGiOhCardManager
                                 }
                                 updateImageButton.Refresh();
 
-                                nrImageLabel.Text = $"You are downloading {nrFile} immages";
-                                timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 10.1)} sec to wait";
+                                nrImageLabel.Text = $"You are downloading {nrFile} images";
+                                timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 5.1)} sec to wait";
 
                                 nrImageLabel.Refresh();
                                 timeLabel.Refresh();
@@ -119,14 +136,34 @@ namespace YuGiOhCardManager
                         }
 
                         DownloadImageApi(item["imageId"].ToString());
+
+                        if(MRE.WaitOne(1)){
+                            Console.WriteLine("MRE Off");
+                            break;
+                        }
                     }
                 }
                 if (InvokeRequired)
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
+                        int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+                        if (nrFile < 0)
+                        {
+                            nrFile = 0;
+                        }
+
+                        nrImageLabel.Text = $"You have {nrFile} image to Download";
+                        nrImageLabel.Refresh();
+
+                        timeLabel.Text = $"[{DateTime.Now}] Download End";
+                        timeLabel.Refresh();
+
                         updateImageButton.Enabled = true;
                         updateImageButton.Refresh();
+
+                        downloadPanel.Visible = false;
+                        downloadPanel.Refresh();
                     }));
                 }
             });
@@ -157,15 +194,17 @@ namespace YuGiOhCardManager
 
                 DateTime time = DateTime.Now;
 
-                while (DateTime.Now.Subtract(time).TotalSeconds < 10) { }
+                //while (DateTime.Now.Subtract(time).TotalSeconds < 5) { }
+
+                Thread.Sleep(5000);
 
             }
             catch (Exception err)
             {
-                /*
                 string Message = $"{err.StackTrace}\n{err.Message}";
                 Console.WriteLine(Message);
-                */
+
+                Console.WriteLine(id);
             }
         }
     }

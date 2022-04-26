@@ -44,14 +44,18 @@ namespace YuGiOhCardManager
             this.footerPanel = new System.Windows.Forms.Panel();
             this.versionLabel = new System.Windows.Forms.Label();
             this.footerCreditLabel = new System.Windows.Forms.Label();
+            this.downloadPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.fillPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.footerPanel.SuspendLayout();
+            this.downloadPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // fillPanel
             // 
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.fillPanel.Controls.Add(this.downloadPanel);
             this.fillPanel.Controls.Add(this.label1);
             this.fillPanel.Controls.Add(this.infoTimeLabel);
             this.fillPanel.Controls.Add(this.timeLabel);
@@ -61,41 +65,43 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.titleLabel);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(1, 1);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fillPanel.Name = "fillPanel";
-            this.fillPanel.Size = new System.Drawing.Size(683, 552);
+            this.fillPanel.Size = new System.Drawing.Size(512, 448);
             this.fillPanel.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(233, 447);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(109, 352);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 20);
+            this.label1.Size = new System.Drawing.Size(312, 52);
             this.label1.TabIndex = 20;
-            this.label1.Text = "You can\'t stop the Download";
+            this.label1.Text = "You can\'t stop the Download.\r\nIf you exit this page, the last image will be downl" +
+    "oaded and the download will stop. ";
             // 
             // infoTimeLabel
             // 
             this.infoTimeLabel.AutoSize = true;
             this.infoTimeLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.infoTimeLabel.ForeColor = System.Drawing.Color.Gray;
-            this.infoTimeLabel.Location = new System.Drawing.Point(152, 415);
+            this.infoTimeLabel.Location = new System.Drawing.Point(114, 325);
+            this.infoTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.infoTimeLabel.Name = "infoTimeLabel";
-            this.infoTimeLabel.Size = new System.Drawing.Size(346, 20);
+            this.infoTimeLabel.Size = new System.Drawing.Size(267, 15);
             this.infoTimeLabel.TabIndex = 19;
-            this.infoTimeLabel.Text = "A single image is downloaded in about 10 seconds";
+            this.infoTimeLabel.Text = "A single image is downloaded in about 5 seconds";
             // 
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timeLabel.ForeColor = System.Drawing.Color.Gray;
-            this.timeLabel.Location = new System.Drawing.Point(203, 288);
+            this.timeLabel.Location = new System.Drawing.Point(156, 219);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(92, 20);
+            this.timeLabel.Size = new System.Drawing.Size(72, 15);
             this.timeLabel.TabIndex = 18;
             this.timeLabel.Text = "0 sec to wait";
             // 
@@ -114,10 +120,10 @@ namespace YuGiOhCardManager
             this.updateImageButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.updateImageButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.updateImageButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.updateImageButton.Location = new System.Drawing.Point(276, 351);
-            this.updateImageButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateImageButton.Location = new System.Drawing.Point(211, 270);
+            this.updateImageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateImageButton.Name = "updateImageButton";
-            this.updateImageButton.Size = new System.Drawing.Size(109, 50);
+            this.updateImageButton.Size = new System.Drawing.Size(82, 41);
             this.updateImageButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.updateImageButton.TabIndex = 17;
             this.updateImageButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -130,9 +136,10 @@ namespace YuGiOhCardManager
             this.nrImageLabel.AutoSize = true;
             this.nrImageLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nrImageLabel.ForeColor = System.Drawing.Color.Gray;
-            this.nrImageLabel.Location = new System.Drawing.Point(205, 250);
+            this.nrImageLabel.Location = new System.Drawing.Point(158, 188);
+            this.nrImageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nrImageLabel.Name = "nrImageLabel";
-            this.nrImageLabel.Size = new System.Drawing.Size(217, 20);
+            this.nrImageLabel.Size = new System.Drawing.Size(171, 15);
             this.nrImageLabel.TabIndex = 13;
             this.nrImageLabel.Text = "You have 0 image to Download";
             // 
@@ -141,9 +148,10 @@ namespace YuGiOhCardManager
             this.title2Label.AutoSize = true;
             this.title2Label.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.title2Label.ForeColor = System.Drawing.Color.Gray;
-            this.title2Label.Location = new System.Drawing.Point(237, 171);
+            this.title2Label.Location = new System.Drawing.Point(178, 139);
+            this.title2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title2Label.Name = "title2Label";
-            this.title2Label.Size = new System.Drawing.Size(186, 37);
+            this.title2Label.Size = new System.Drawing.Size(151, 30);
             this.title2Label.TabIndex = 12;
             this.title2Label.Text = "Update Image";
             // 
@@ -152,9 +160,10 @@ namespace YuGiOhCardManager
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.titleLabel.ForeColor = System.Drawing.Color.Gray;
-            this.titleLabel.Location = new System.Drawing.Point(95, 102);
+            this.titleLabel.Location = new System.Drawing.Point(71, 83);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(478, 57);
+            this.titleLabel.Size = new System.Drawing.Size(384, 46);
             this.titleLabel.TabIndex = 11;
             this.titleLabel.Text = "Yu-Gi-Oh Card Manager";
             // 
@@ -165,9 +174,8 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(683, 65);
+            this.headerPanel.Size = new System.Drawing.Size(512, 53);
             this.headerPanel.TabIndex = 1;
             // 
             // closeAllButton
@@ -178,10 +186,10 @@ namespace YuGiOhCardManager
             this.closeAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeAllButton.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.closeAllButton.ForeColor = System.Drawing.Color.Gray;
-            this.closeAllButton.Location = new System.Drawing.Point(626, 0);
-            this.closeAllButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeAllButton.Location = new System.Drawing.Point(469, 0);
+            this.closeAllButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeAllButton.Name = "closeAllButton";
-            this.closeAllButton.Size = new System.Drawing.Size(57, 65);
+            this.closeAllButton.Size = new System.Drawing.Size(43, 53);
             this.closeAllButton.TabIndex = 4;
             this.closeAllButton.Text = "❌";
             this.closeAllButton.UseVisualStyleBackColor = true;
@@ -193,8 +201,9 @@ namespace YuGiOhCardManager
             this.headerCreditsLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.headerCreditsLabel.ForeColor = System.Drawing.Color.Gray;
             this.headerCreditsLabel.Location = new System.Drawing.Point(0, 0);
+            this.headerCreditsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerCreditsLabel.Name = "headerCreditsLabel";
-            this.headerCreditsLabel.Size = new System.Drawing.Size(683, 65);
+            this.headerCreditsLabel.Size = new System.Drawing.Size(512, 53);
             this.headerCreditsLabel.TabIndex = 3;
             this.headerCreditsLabel.Text = "Yu-Gi-Oh Card Manager";
             this.headerCreditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,10 +215,9 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.versionLabel);
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(1, 488);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.footerPanel.Location = new System.Drawing.Point(1, 396);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(683, 65);
+            this.footerPanel.Size = new System.Drawing.Size(512, 53);
             this.footerPanel.TabIndex = 1;
             // 
             // versionLabel
@@ -218,9 +226,8 @@ namespace YuGiOhCardManager
             this.versionLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.versionLabel.ForeColor = System.Drawing.Color.Gray;
             this.versionLabel.Location = new System.Drawing.Point(0, 0);
-            this.versionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(139, 65);
+            this.versionLabel.Size = new System.Drawing.Size(104, 53);
             this.versionLabel.TabIndex = 3;
             this.versionLabel.Text = "Version 1.1";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,22 +238,44 @@ namespace YuGiOhCardManager
             this.footerCreditLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.footerCreditLabel.ForeColor = System.Drawing.Color.Gray;
             this.footerCreditLabel.Location = new System.Drawing.Point(0, 0);
+            this.footerCreditLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.footerCreditLabel.Name = "footerCreditLabel";
-            this.footerCreditLabel.Size = new System.Drawing.Size(683, 65);
+            this.footerCreditLabel.Size = new System.Drawing.Size(512, 53);
             this.footerCreditLabel.TabIndex = 2;
             this.footerCreditLabel.Text = "Created By Simone Zoppelletto";
             this.footerCreditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // downloadPanel
+            // 
+            this.downloadPanel.Controls.Add(this.label2);
+            this.downloadPanel.Location = new System.Drawing.Point(161, 245);
+            this.downloadPanel.Name = "downloadPanel";
+            this.downloadPanel.Size = new System.Drawing.Size(200, 74);
+            this.downloadPanel.TabIndex = 21;
+            this.downloadPanel.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(28, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 15);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Download in progress...";
+            // 
             // UpdateImageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 554);
+            this.ClientSize = new System.Drawing.Size(514, 450);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.fillPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateImageForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,6 +284,8 @@ namespace YuGiOhCardManager
             this.fillPanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.footerPanel.ResumeLayout(false);
+            this.downloadPanel.ResumeLayout(false);
+            this.downloadPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +306,7 @@ namespace YuGiOhCardManager
         private ReaLTaiizor.Controls.ParrotButton updateImageButton;
         private System.Windows.Forms.Label infoTimeLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel downloadPanel;
+        private System.Windows.Forms.Label label2;
     }
 }

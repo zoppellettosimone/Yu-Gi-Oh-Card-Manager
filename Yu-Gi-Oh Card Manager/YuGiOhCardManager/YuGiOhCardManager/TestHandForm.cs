@@ -178,9 +178,9 @@ namespace YuGiOhCardManager
                     pictureBox1.Image = Resources.unknownCard;
                 }
                 var nameImg1 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img1).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                if(nameImg1.Length > 29)
+                if(nameImg1.Length > 26)
                 {
-                    nameImg1 = nameImg1.Substring(0, 29);
+                    nameImg1 = nameImg1.Substring(0, 26);
                 }
                 if(nameImg1 != null)
                 {
@@ -205,9 +205,9 @@ namespace YuGiOhCardManager
                         pictureBox2.Image = Resources.unknownCard;
                     }
                     var nameImg2 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img2).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                    if (nameImg2.Length > 29)
+                    if (nameImg2.Length > 26)
                     {
-                        nameImg2 = nameImg2.Substring(0, 29);
+                        nameImg2 = nameImg2.Substring(0, 26);
                     }
                     if (nameImg2 != null)
                     {
@@ -232,9 +232,9 @@ namespace YuGiOhCardManager
                             pictureBox3.Image = Resources.unknownCard;
                         }
                         var nameImg3 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img3).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                        if (nameImg3.Length > 29)
+                        if (nameImg3.Length > 26)
                         {
-                            nameImg3 = nameImg3.Substring(0, 29);
+                            nameImg3 = nameImg3.Substring(0, 26);
                         }
                         if (nameImg3 != null)
                         {
@@ -259,9 +259,9 @@ namespace YuGiOhCardManager
                                 pictureBox4.Image = Resources.unknownCard;
                             }
                             var nameImg4 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img4).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                            if (nameImg4.Length > 29)
+                            if (nameImg4.Length > 26)
                             {
-                                nameImg4 = nameImg4.Substring(0, 29);
+                                nameImg4 = nameImg4.Substring(0, 26);
                             }
                             if (nameImg4 != null)
                             {
@@ -286,9 +286,9 @@ namespace YuGiOhCardManager
                                     pictureBox5.Image = Resources.unknownCard;
                                 }
                                 var nameImg5 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img5).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                                if (nameImg5.Length > 29)
+                                if (nameImg5.Length > 26)
                                 {
-                                    nameImg5 = nameImg5.Substring(0, 29);
+                                    nameImg5 = nameImg5.Substring(0, 26);
                                 }
                                 if (nameImg5 != null)
                                 {
@@ -313,9 +313,9 @@ namespace YuGiOhCardManager
                 idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
                 var fileImg = d.GetFiles(img + ".jpg");
                 var nameImg = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                if (nameImg.Length > 29)
+                if (nameImg.Length > 26)
                 {
-                    nameImg = nameImg.Substring(0, 29);
+                    nameImg = nameImg.Substring(0, 26);
                 }
                 if (fileImg.Length > 0)
                 {

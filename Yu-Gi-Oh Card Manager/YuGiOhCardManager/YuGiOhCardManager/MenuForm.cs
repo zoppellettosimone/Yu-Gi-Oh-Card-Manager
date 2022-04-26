@@ -286,7 +286,7 @@ namespace YuGiOhCardManager
 
             row.Cells[7].Value = item["desc"];
 
-            row.Cells[8].Value = item["price"];
+            row.Cells[8].Value = float.Parse(item["price"].ToString())/100;
 
             if (float.Parse(item["price"].ToString()) < 300)
             {
@@ -334,7 +334,7 @@ namespace YuGiOhCardManager
 
             row.Cells[3].Value = item["nrCopies"];
 
-            row.Cells[4].Value = item["price"];
+            row.Cells[4].Value = float.Parse(item["price"].ToString())/100;
 
             if (float.Parse(item["price"].ToString()) < 300)
             {
@@ -415,7 +415,7 @@ namespace YuGiOhCardManager
 
             row.Cells[2].Value = somExtra;
 
-            row.Cells[3].Value = price;
+            row.Cells[3].Value = price/100;
 
             row.Cells[4].Value = penEmoji;
 
@@ -453,7 +453,7 @@ namespace YuGiOhCardManager
 
             row.Cells[3].Value = item["nrCopies"];
 
-            row.Cells[4].Value = item["price"];
+            row.Cells[4].Value = float.Parse(item["price"].ToString())/100;
 
             row.Cells[5].Value = penEmoji;
 

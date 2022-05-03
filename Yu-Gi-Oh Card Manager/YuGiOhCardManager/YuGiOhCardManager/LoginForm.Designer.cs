@@ -75,7 +75,7 @@ namespace YuGiOhCardManager
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 3;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel

@@ -250,43 +250,32 @@ namespace YuGiOhCardManager
         {
             DataGridViewRow row = (DataGridViewRow)searchCardDataGridView.Rows[0].Clone();
 
-            /*
+            row.Cells[0].Value = "🖊";
 
-            var file = d.GetFiles(item["imageId"].ToString() +  ".jpg");
+            row.Cells[1].Value = item["name"];
 
-            if (file.Length == 1)
-            {
+            row.Cells[2].Value = item["type"];
 
-                ((DataGridViewImageCell)row.Cells[0]).Value = Image.FromFile(file[0].FullName);
+            row.Cells[3].Value = item["race"];
 
-            }
-
-            */
-
-            row.Cells[0].Value = item["name"];
-
-            row.Cells[1].Value = item["type"];
-
-            row.Cells[2].Value = item["race"];
-
-            row.Cells[3].Value = item["attribute"];
+            row.Cells[4].Value = item["attribute"];
 
             if (int.Parse(item["level"].ToString()) > 0)
             {
-                row.Cells[4].Value = item["level"];
+                row.Cells[5].Value = item["level"];
             }
             else
             {
-                row.Cells[4].Value = item["linkval"];
+                row.Cells[5].Value = item["linkval"];
             }
 
-            row.Cells[5].Value = item["atk"];
+            row.Cells[6].Value = item["atk"];
 
-            row.Cells[6].Value = item["def"];
+            row.Cells[7].Value = item["def"];
 
-            row.Cells[7].Value = item["desc"];
+            row.Cells[8].Value = item["desc"];
 
-            row.Cells[8].Value = float.Parse(item["price"].ToString())/100;
+            row.Cells[9].Value = float.Parse(item["price"].ToString())/100;
 
             if (float.Parse(item["price"].ToString()) < 300)
             {
@@ -304,7 +293,8 @@ namespace YuGiOhCardManager
                 row.DefaultCellStyle.ForeColor = Color.White;
             }
 
-            row.Cells[7].Style.WrapMode = DataGridViewTriState.True;
+            row.Cells[0].Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            row.Cells[8].Style.WrapMode = DataGridViewTriState.True;
 
             return row;
 
@@ -1221,6 +1211,16 @@ namespace YuGiOhCardManager
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void searchCardDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                OpenImageForm oif = new OpenImageForm(apiResList.Where(p => p["name"].Equals(searchCardDataGridView[1, e.RowIndex].Value)).Select(p => new string(p["imageId"].ToString().ToCharArray())).FirstOrDefault());
+
+                oif.ShowDialog();
+            }
         }
     }
 }

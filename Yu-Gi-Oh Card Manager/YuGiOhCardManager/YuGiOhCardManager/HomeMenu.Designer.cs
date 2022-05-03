@@ -37,6 +37,7 @@ namespace YuGiOhCardManager
             this.versionLabel = new System.Windows.Forms.Label();
             this.footerCreditLabel = new System.Windows.Forms.Label();
             this.fillPanel = new System.Windows.Forms.Panel();
+            this.addNewUserButton = new System.Windows.Forms.Button();
             this.title2Label = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.checkImageButton = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1065, 65);
             this.headerPanel.TabIndex = 0;
@@ -96,7 +97,7 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(1, 488);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(1065, 65);
             this.footerPanel.TabIndex = 1;
@@ -111,7 +112,7 @@ namespace YuGiOhCardManager
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 2;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -129,6 +130,7 @@ namespace YuGiOhCardManager
             // fillPanel
             // 
             this.fillPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.fillPanel.Controls.Add(this.addNewUserButton);
             this.fillPanel.Controls.Add(this.title2Label);
             this.fillPanel.Controls.Add(this.titleLabel);
             this.fillPanel.Controls.Add(this.checkImageButton);
@@ -136,10 +138,25 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.testHandButton);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(1, 66);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(4);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(1065, 422);
             this.fillPanel.TabIndex = 2;
+            // 
+            // addNewUserButton
+            // 
+            this.addNewUserButton.FlatAppearance.BorderSize = 0;
+            this.addNewUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.addNewUserButton.ForeColor = System.Drawing.Color.Gray;
+            this.addNewUserButton.Location = new System.Drawing.Point(943, 50);
+            this.addNewUserButton.Margin = new System.Windows.Forms.Padding(4);
+            this.addNewUserButton.Name = "addNewUserButton";
+            this.addNewUserButton.Size = new System.Drawing.Size(107, 77);
+            this.addNewUserButton.TabIndex = 11;
+            this.addNewUserButton.Text = "Add New User";
+            this.addNewUserButton.UseVisualStyleBackColor = true;
+            this.addNewUserButton.Click += new System.EventHandler(this.addNewUserButton_Click);
             // 
             // title2Label
             // 
@@ -170,7 +187,7 @@ namespace YuGiOhCardManager
             this.checkImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkImageButton.ForeColor = System.Drawing.Color.White;
             this.checkImageButton.Location = new System.Drawing.Point(749, 165);
-            this.checkImageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkImageButton.Margin = new System.Windows.Forms.Padding(4);
             this.checkImageButton.Name = "checkImageButton";
             this.checkImageButton.Size = new System.Drawing.Size(200, 185);
             this.checkImageButton.TabIndex = 2;
@@ -185,7 +202,7 @@ namespace YuGiOhCardManager
             this.MenuFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuFormButton.ForeColor = System.Drawing.Color.White;
             this.MenuFormButton.Location = new System.Drawing.Point(433, 165);
-            this.MenuFormButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MenuFormButton.Margin = new System.Windows.Forms.Padding(4);
             this.MenuFormButton.Name = "MenuFormButton";
             this.MenuFormButton.Size = new System.Drawing.Size(200, 185);
             this.MenuFormButton.TabIndex = 1;
@@ -200,7 +217,7 @@ namespace YuGiOhCardManager
             this.testHandButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testHandButton.ForeColor = System.Drawing.Color.White;
             this.testHandButton.Location = new System.Drawing.Point(116, 165);
-            this.testHandButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.testHandButton.Margin = new System.Windows.Forms.Padding(4);
             this.testHandButton.Name = "testHandButton";
             this.testHandButton.Size = new System.Drawing.Size(200, 185);
             this.testHandButton.TabIndex = 0;
@@ -218,7 +235,7 @@ namespace YuGiOhCardManager
             this.Controls.Add(this.headerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeMenu";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -245,5 +262,6 @@ namespace YuGiOhCardManager
         private System.Windows.Forms.Button checkImageButton;
         private System.Windows.Forms.Label title2Label;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Button addNewUserButton;
     }
 }

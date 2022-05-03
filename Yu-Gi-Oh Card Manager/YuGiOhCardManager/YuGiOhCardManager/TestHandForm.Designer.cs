@@ -85,7 +85,7 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(1, 488);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(1065, 65);
             this.footerPanel.TabIndex = 0;
@@ -100,7 +100,7 @@ namespace YuGiOhCardManager
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 5;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -143,7 +143,7 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.pictureBox1);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(1, 1);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(4);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(1065, 487);
             this.fillPanel.TabIndex = 1;
@@ -342,7 +342,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox10.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox10.Location = new System.Drawing.Point(867, 330);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(107, 127);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -353,7 +353,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox9.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox9.Location = new System.Drawing.Point(672, 330);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(107, 127);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -364,7 +364,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox8.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox8.Location = new System.Drawing.Point(477, 330);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(107, 127);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -375,7 +375,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox7.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox7.Location = new System.Drawing.Point(283, 330);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(107, 127);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -386,7 +386,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox6.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox6.Location = new System.Drawing.Point(88, 330);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(107, 127);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -397,7 +397,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox5.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox5.Location = new System.Drawing.Point(867, 160);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(107, 127);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -408,7 +408,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox4.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox4.Location = new System.Drawing.Point(672, 160);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(107, 127);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,7 +419,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox3.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox3.Location = new System.Drawing.Point(477, 160);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 127);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +430,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox2.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox2.Location = new System.Drawing.Point(283, 160);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(107, 127);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -441,7 +441,7 @@ namespace YuGiOhCardManager
             // 
             this.pictureBox1.Image = global::YuGiOhCardManager.Properties.Resources.yugiohCardBack;
             this.pictureBox1.Location = new System.Drawing.Point(93, 160);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -457,7 +457,7 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1065, 65);
             this.headerPanel.TabIndex = 2;
@@ -539,7 +539,7 @@ namespace YuGiOhCardManager
             this.Controls.Add(this.footerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TestHandForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

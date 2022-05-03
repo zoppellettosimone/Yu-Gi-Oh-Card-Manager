@@ -54,7 +54,7 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.titleLabel);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(1, 1);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(4);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(465, 324);
             this.fillPanel.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace YuGiOhCardManager
             this.panel1.Controls.Add(this.footerCreditLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 259);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 65);
             this.panel1.TabIndex = 17;
@@ -80,7 +80,7 @@ namespace YuGiOhCardManager
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(120, 65);
             this.versionLabel.TabIndex = 3;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -100,7 +100,7 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(465, 65);
             this.headerPanel.TabIndex = 16;
@@ -189,7 +189,7 @@ namespace YuGiOhCardManager
             this.Controls.Add(this.fillPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConfermForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

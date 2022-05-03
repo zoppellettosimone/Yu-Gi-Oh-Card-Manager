@@ -43,6 +43,7 @@ namespace YuGiOhCardManager
             this.tabPage = new ReaLTaiizor.Controls.HopeTabPage();
             this.searchCardTabPage = new System.Windows.Forms.TabPage();
             this.searchCardDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,9 +137,9 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(748, 49);
+            this.headerPanel.Size = new System.Drawing.Size(998, 60);
             this.headerPanel.TabIndex = 0;
             // 
             // minimizedButton
@@ -148,10 +149,10 @@ namespace YuGiOhCardManager
             this.minimizedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizedButton.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.minimizedButton.ForeColor = System.Drawing.Color.Gray;
-            this.minimizedButton.Location = new System.Drawing.Point(619, 0);
-            this.minimizedButton.Margin = new System.Windows.Forms.Padding(2);
+            this.minimizedButton.Location = new System.Drawing.Point(827, 0);
+            this.minimizedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minimizedButton.Name = "minimizedButton";
-            this.minimizedButton.Size = new System.Drawing.Size(43, 49);
+            this.minimizedButton.Size = new System.Drawing.Size(57, 60);
             this.minimizedButton.TabIndex = 4;
             this.minimizedButton.Text = "–";
             this.minimizedButton.UseVisualStyleBackColor = true;
@@ -164,10 +165,10 @@ namespace YuGiOhCardManager
             this.resizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resizeButton.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.resizeButton.ForeColor = System.Drawing.Color.Gray;
-            this.resizeButton.Location = new System.Drawing.Point(662, 0);
-            this.resizeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.resizeButton.Location = new System.Drawing.Point(884, 0);
+            this.resizeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resizeButton.Name = "resizeButton";
-            this.resizeButton.Size = new System.Drawing.Size(43, 49);
+            this.resizeButton.Size = new System.Drawing.Size(57, 60);
             this.resizeButton.TabIndex = 3;
             this.resizeButton.Text = "◻";
             this.resizeButton.UseVisualStyleBackColor = true;
@@ -181,10 +182,10 @@ namespace YuGiOhCardManager
             this.closeAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeAllButton.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.closeAllButton.ForeColor = System.Drawing.Color.Gray;
-            this.closeAllButton.Location = new System.Drawing.Point(705, 0);
-            this.closeAllButton.Margin = new System.Windows.Forms.Padding(2);
+            this.closeAllButton.Location = new System.Drawing.Point(941, 0);
+            this.closeAllButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeAllButton.Name = "closeAllButton";
-            this.closeAllButton.Size = new System.Drawing.Size(43, 49);
+            this.closeAllButton.Size = new System.Drawing.Size(57, 60);
             this.closeAllButton.TabIndex = 2;
             this.closeAllButton.Text = "❌";
             this.closeAllButton.UseVisualStyleBackColor = true;
@@ -196,9 +197,8 @@ namespace YuGiOhCardManager
             this.headerCreditsLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.headerCreditsLabel.ForeColor = System.Drawing.Color.Gray;
             this.headerCreditsLabel.Location = new System.Drawing.Point(0, 0);
-            this.headerCreditsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerCreditsLabel.Name = "headerCreditsLabel";
-            this.headerCreditsLabel.Size = new System.Drawing.Size(748, 49);
+            this.headerCreditsLabel.Size = new System.Drawing.Size(998, 60);
             this.headerCreditsLabel.TabIndex = 1;
             this.headerCreditsLabel.Text = "Yu-Gi-Oh Card Manager";
             this.headerCreditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,10 +211,10 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.versionLabel);
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(1, 393);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.footerPanel.Location = new System.Drawing.Point(1, 484);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(748, 53);
+            this.footerPanel.Size = new System.Drawing.Size(998, 65);
             this.footerPanel.TabIndex = 1;
             // 
             // versionLabel
@@ -223,10 +223,11 @@ namespace YuGiOhCardManager
             this.versionLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.versionLabel.ForeColor = System.Drawing.Color.Gray;
             this.versionLabel.Location = new System.Drawing.Point(0, 0);
+            this.versionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(104, 53);
+            this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 3;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -235,9 +236,8 @@ namespace YuGiOhCardManager
             this.footerCreditLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.footerCreditLabel.ForeColor = System.Drawing.Color.Gray;
             this.footerCreditLabel.Location = new System.Drawing.Point(0, 0);
-            this.footerCreditLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.footerCreditLabel.Name = "footerCreditLabel";
-            this.footerCreditLabel.Size = new System.Drawing.Size(748, 53);
+            this.footerCreditLabel.Size = new System.Drawing.Size(998, 65);
             this.footerCreditLabel.TabIndex = 0;
             this.footerCreditLabel.Text = "Created By Simone Zoppelletto";
             this.footerCreditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,10 +246,10 @@ namespace YuGiOhCardManager
             // 
             this.fillPanel.Controls.Add(this.tabPage);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fillPanel.Location = new System.Drawing.Point(1, 50);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.fillPanel.Location = new System.Drawing.Point(1, 61);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fillPanel.Name = "fillPanel";
-            this.fillPanel.Size = new System.Drawing.Size(748, 343);
+            this.fillPanel.Size = new System.Drawing.Size(998, 423);
             this.fillPanel.TabIndex = 2;
             // 
             // tabPage
@@ -266,10 +266,10 @@ namespace YuGiOhCardManager
             this.tabPage.ForeColorC = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabPage.ItemSize = new System.Drawing.Size(120, 45);
             this.tabPage.Location = new System.Drawing.Point(0, 0);
-            this.tabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(748, 343);
+            this.tabPage.Size = new System.Drawing.Size(998, 423);
             this.tabPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabPage.TabIndex = 2;
             this.tabPage.ThemeColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
@@ -283,10 +283,10 @@ namespace YuGiOhCardManager
             this.searchCardTabPage.Controls.Add(this.headerSearchCardHeaderPanel);
             this.searchCardTabPage.ForeColor = System.Drawing.Color.White;
             this.searchCardTabPage.Location = new System.Drawing.Point(0, 45);
-            this.searchCardTabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.searchCardTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchCardTabPage.Name = "searchCardTabPage";
-            this.searchCardTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.searchCardTabPage.Size = new System.Drawing.Size(748, 298);
+            this.searchCardTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchCardTabPage.Size = new System.Drawing.Size(998, 378);
             this.searchCardTabPage.TabIndex = 0;
             this.searchCardTabPage.Text = "Search Card";
             // 
@@ -295,6 +295,7 @@ namespace YuGiOhCardManager
             this.searchCardDataGridView.AllowUserToDeleteRows = false;
             this.searchCardDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchCardDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column20,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -305,14 +306,24 @@ namespace YuGiOhCardManager
             this.Column8,
             this.Column9});
             this.searchCardDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchCardDataGridView.Location = new System.Drawing.Point(2, 48);
-            this.searchCardDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.searchCardDataGridView.Location = new System.Drawing.Point(3, 59);
+            this.searchCardDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchCardDataGridView.Name = "searchCardDataGridView";
             this.searchCardDataGridView.ReadOnly = true;
             this.searchCardDataGridView.RowHeadersWidth = 51;
             this.searchCardDataGridView.RowTemplate.Height = 50;
-            this.searchCardDataGridView.Size = new System.Drawing.Size(744, 248);
+            this.searchCardDataGridView.Size = new System.Drawing.Size(992, 317);
             this.searchCardDataGridView.TabIndex = 1;
+            this.searchCardDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchCardDataGridView_CellClick);
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column20.HeaderText = "Image";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Width = 80;
             // 
             // Column1
             // 
@@ -405,19 +416,19 @@ namespace YuGiOhCardManager
             this.headerSearchCardHeaderPanel.Controls.Add(this.searchSearchCardTextBox);
             this.headerSearchCardHeaderPanel.Controls.Add(this.searchSearchCardLabel);
             this.headerSearchCardHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerSearchCardHeaderPanel.Location = new System.Drawing.Point(2, 2);
-            this.headerSearchCardHeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.headerSearchCardHeaderPanel.Location = new System.Drawing.Point(3, 2);
+            this.headerSearchCardHeaderPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.headerSearchCardHeaderPanel.Name = "headerSearchCardHeaderPanel";
-            this.headerSearchCardHeaderPanel.Size = new System.Drawing.Size(744, 46);
+            this.headerSearchCardHeaderPanel.Size = new System.Drawing.Size(992, 57);
             this.headerSearchCardHeaderPanel.TabIndex = 0;
             // 
             // searchSearchCardTextBox
             // 
             this.searchSearchCardTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searchSearchCardTextBox.Location = new System.Drawing.Point(60, 12);
-            this.searchSearchCardTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchSearchCardTextBox.Location = new System.Drawing.Point(80, 15);
+            this.searchSearchCardTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchSearchCardTextBox.Name = "searchSearchCardTextBox";
-            this.searchSearchCardTextBox.Size = new System.Drawing.Size(109, 23);
+            this.searchSearchCardTextBox.Size = new System.Drawing.Size(144, 27);
             this.searchSearchCardTextBox.TabIndex = 12;
             this.searchSearchCardTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
@@ -426,10 +437,9 @@ namespace YuGiOhCardManager
             this.searchSearchCardLabel.AutoSize = true;
             this.searchSearchCardLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchSearchCardLabel.ForeColor = System.Drawing.Color.Gray;
-            this.searchSearchCardLabel.Location = new System.Drawing.Point(9, 15);
-            this.searchSearchCardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.searchSearchCardLabel.Location = new System.Drawing.Point(12, 18);
             this.searchSearchCardLabel.Name = "searchSearchCardLabel";
-            this.searchSearchCardLabel.Size = new System.Drawing.Size(45, 15);
+            this.searchSearchCardLabel.Size = new System.Drawing.Size(56, 20);
             this.searchSearchCardLabel.TabIndex = 11;
             this.searchSearchCardLabel.Text = "Search:";
             // 
@@ -440,10 +450,10 @@ namespace YuGiOhCardManager
             this.wishlistTabPage.Controls.Add(this.wishlistHeaderPanel);
             this.wishlistTabPage.ForeColor = System.Drawing.Color.White;
             this.wishlistTabPage.Location = new System.Drawing.Point(0, 45);
-            this.wishlistTabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.wishlistTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wishlistTabPage.Name = "wishlistTabPage";
-            this.wishlistTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.wishlistTabPage.Size = new System.Drawing.Size(748, 298);
+            this.wishlistTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.wishlistTabPage.Size = new System.Drawing.Size(998, 378);
             this.wishlistTabPage.TabIndex = 1;
             this.wishlistTabPage.Text = "Wishlist";
             // 
@@ -460,13 +470,13 @@ namespace YuGiOhCardManager
             this.Column11,
             this.Column12});
             this.wishlistDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wishlistDataGridView.Location = new System.Drawing.Point(2, 48);
-            this.wishlistDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.wishlistDataGridView.Location = new System.Drawing.Point(3, 59);
+            this.wishlistDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wishlistDataGridView.Name = "wishlistDataGridView";
             this.wishlistDataGridView.ReadOnly = true;
             this.wishlistDataGridView.RowHeadersWidth = 51;
             this.wishlistDataGridView.RowTemplate.Height = 50;
-            this.wishlistDataGridView.Size = new System.Drawing.Size(744, 248);
+            this.wishlistDataGridView.Size = new System.Drawing.Size(992, 317);
             this.wishlistDataGridView.TabIndex = 2;
             this.wishlistDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.wishlistDataGridView_CellClick);
             // 
@@ -494,6 +504,7 @@ namespace YuGiOhCardManager
             // 
             this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column19.HeaderText = "Type";
+            this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
             this.Column19.Width = 120;
@@ -522,6 +533,7 @@ namespace YuGiOhCardManager
             // 
             this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column11.HeaderText = "";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -531,6 +543,7 @@ namespace YuGiOhCardManager
             // 
             this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column12.HeaderText = "";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -542,19 +555,20 @@ namespace YuGiOhCardManager
             this.wishlistHeaderPanel.Controls.Add(this.searchWishlistCardTextBox);
             this.wishlistHeaderPanel.Controls.Add(this.label1);
             this.wishlistHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.wishlistHeaderPanel.Location = new System.Drawing.Point(2, 2);
-            this.wishlistHeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.wishlistHeaderPanel.Location = new System.Drawing.Point(3, 2);
+            this.wishlistHeaderPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wishlistHeaderPanel.Name = "wishlistHeaderPanel";
-            this.wishlistHeaderPanel.Size = new System.Drawing.Size(744, 46);
+            this.wishlistHeaderPanel.Size = new System.Drawing.Size(992, 57);
             this.wishlistHeaderPanel.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.insertWishlistButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(660, 0);
+            this.panel1.Location = new System.Drawing.Point(880, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(84, 46);
+            this.panel1.Size = new System.Drawing.Size(112, 57);
             this.panel1.TabIndex = 17;
             // 
             // insertWishlistButton
@@ -572,10 +586,10 @@ namespace YuGiOhCardManager
             this.insertWishlistButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.insertWishlistButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.insertWishlistButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.insertWishlistButton.Location = new System.Drawing.Point(2, 3);
-            this.insertWishlistButton.Margin = new System.Windows.Forms.Padding(2);
+            this.insertWishlistButton.Location = new System.Drawing.Point(3, 4);
+            this.insertWishlistButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insertWishlistButton.Name = "insertWishlistButton";
-            this.insertWishlistButton.Size = new System.Drawing.Size(75, 41);
+            this.insertWishlistButton.Size = new System.Drawing.Size(100, 50);
             this.insertWishlistButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.insertWishlistButton.TabIndex = 16;
             this.insertWishlistButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -586,10 +600,10 @@ namespace YuGiOhCardManager
             // searchWishlistCardTextBox
             // 
             this.searchWishlistCardTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searchWishlistCardTextBox.Location = new System.Drawing.Point(58, 11);
-            this.searchWishlistCardTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchWishlistCardTextBox.Location = new System.Drawing.Point(77, 14);
+            this.searchWishlistCardTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchWishlistCardTextBox.Name = "searchWishlistCardTextBox";
-            this.searchWishlistCardTextBox.Size = new System.Drawing.Size(109, 23);
+            this.searchWishlistCardTextBox.Size = new System.Drawing.Size(144, 27);
             this.searchWishlistCardTextBox.TabIndex = 14;
             this.searchWishlistCardTextBox.TextChanged += new System.EventHandler(this.searchWishlistCardTextBox_TextChanged);
             // 
@@ -598,10 +612,9 @@ namespace YuGiOhCardManager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(7, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(9, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Search:";
             // 
@@ -612,10 +625,10 @@ namespace YuGiOhCardManager
             this.myDeckTabPage.Controls.Add(this.headerMyDeckHeaderPanel);
             this.myDeckTabPage.ForeColor = System.Drawing.Color.White;
             this.myDeckTabPage.Location = new System.Drawing.Point(0, 45);
-            this.myDeckTabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.myDeckTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.myDeckTabPage.Name = "myDeckTabPage";
-            this.myDeckTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.myDeckTabPage.Size = new System.Drawing.Size(748, 298);
+            this.myDeckTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myDeckTabPage.Size = new System.Drawing.Size(998, 378);
             this.myDeckTabPage.TabIndex = 2;
             this.myDeckTabPage.Text = "My Deck";
             // 
@@ -631,13 +644,13 @@ namespace YuGiOhCardManager
             this.Column14,
             this.Column15});
             this.myDeckDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myDeckDataGridView.Location = new System.Drawing.Point(2, 48);
-            this.myDeckDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.myDeckDataGridView.Location = new System.Drawing.Point(3, 59);
+            this.myDeckDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.myDeckDataGridView.Name = "myDeckDataGridView";
             this.myDeckDataGridView.ReadOnly = true;
             this.myDeckDataGridView.RowHeadersWidth = 51;
             this.myDeckDataGridView.RowTemplate.Height = 50;
-            this.myDeckDataGridView.Size = new System.Drawing.Size(744, 248);
+            this.myDeckDataGridView.Size = new System.Drawing.Size(992, 317);
             this.myDeckDataGridView.TabIndex = 3;
             this.myDeckDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDeckDataGridView_CellClick);
             // 
@@ -664,6 +677,7 @@ namespace YuGiOhCardManager
             // 
             this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column10.HeaderText = "Extra Card";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -673,6 +687,7 @@ namespace YuGiOhCardManager
             // 
             this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column13.HeaderText = "Price";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -682,6 +697,7 @@ namespace YuGiOhCardManager
             // 
             this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column14.HeaderText = "";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
             this.Column14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -691,6 +707,7 @@ namespace YuGiOhCardManager
             // 
             this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column15.HeaderText = "";
+            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             this.Column15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -702,19 +719,20 @@ namespace YuGiOhCardManager
             this.headerMyDeckHeaderPanel.Controls.Add(this.searcMyDeckTextBox);
             this.headerMyDeckHeaderPanel.Controls.Add(this.label2);
             this.headerMyDeckHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerMyDeckHeaderPanel.Location = new System.Drawing.Point(2, 2);
-            this.headerMyDeckHeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.headerMyDeckHeaderPanel.Location = new System.Drawing.Point(3, 2);
+            this.headerMyDeckHeaderPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.headerMyDeckHeaderPanel.Name = "headerMyDeckHeaderPanel";
-            this.headerMyDeckHeaderPanel.Size = new System.Drawing.Size(744, 46);
+            this.headerMyDeckHeaderPanel.Size = new System.Drawing.Size(992, 57);
             this.headerMyDeckHeaderPanel.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.insertMyDeckButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(660, 0);
+            this.panel2.Location = new System.Drawing.Point(880, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(84, 46);
+            this.panel2.Size = new System.Drawing.Size(112, 57);
             this.panel2.TabIndex = 18;
             // 
             // insertMyDeckButton
@@ -732,10 +750,10 @@ namespace YuGiOhCardManager
             this.insertMyDeckButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.insertMyDeckButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.insertMyDeckButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.insertMyDeckButton.Location = new System.Drawing.Point(0, 3);
-            this.insertMyDeckButton.Margin = new System.Windows.Forms.Padding(2);
+            this.insertMyDeckButton.Location = new System.Drawing.Point(0, 4);
+            this.insertMyDeckButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insertMyDeckButton.Name = "insertMyDeckButton";
-            this.insertMyDeckButton.Size = new System.Drawing.Size(75, 41);
+            this.insertMyDeckButton.Size = new System.Drawing.Size(100, 50);
             this.insertMyDeckButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.insertMyDeckButton.TabIndex = 17;
             this.insertMyDeckButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -746,10 +764,10 @@ namespace YuGiOhCardManager
             // searcMyDeckTextBox
             // 
             this.searcMyDeckTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searcMyDeckTextBox.Location = new System.Drawing.Point(58, 12);
-            this.searcMyDeckTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searcMyDeckTextBox.Location = new System.Drawing.Point(77, 15);
+            this.searcMyDeckTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searcMyDeckTextBox.Name = "searcMyDeckTextBox";
-            this.searcMyDeckTextBox.Size = new System.Drawing.Size(109, 23);
+            this.searcMyDeckTextBox.Size = new System.Drawing.Size(144, 27);
             this.searcMyDeckTextBox.TabIndex = 14;
             this.searcMyDeckTextBox.TextChanged += new System.EventHandler(this.searcMyDeckTextBox_TextChanged);
             // 
@@ -758,10 +776,9 @@ namespace YuGiOhCardManager
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(7, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(9, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Search:";
             // 
@@ -772,10 +789,10 @@ namespace YuGiOhCardManager
             this.seeDeckTabPage.Controls.Add(this.headerSeeDeckHeaderPanel);
             this.seeDeckTabPage.ForeColor = System.Drawing.Color.White;
             this.seeDeckTabPage.Location = new System.Drawing.Point(0, 45);
-            this.seeDeckTabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.seeDeckTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seeDeckTabPage.Name = "seeDeckTabPage";
-            this.seeDeckTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.seeDeckTabPage.Size = new System.Drawing.Size(748, 298);
+            this.seeDeckTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seeDeckTabPage.Size = new System.Drawing.Size(998, 378);
             this.seeDeckTabPage.TabIndex = 4;
             this.seeDeckTabPage.Text = "See Deck";
             // 
@@ -792,13 +809,13 @@ namespace YuGiOhCardManager
             this.Column16,
             this.Column17});
             this.seeDeckDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.seeDeckDataGridView.Location = new System.Drawing.Point(2, 48);
-            this.seeDeckDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.seeDeckDataGridView.Location = new System.Drawing.Point(3, 59);
+            this.seeDeckDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seeDeckDataGridView.Name = "seeDeckDataGridView";
             this.seeDeckDataGridView.ReadOnly = true;
             this.seeDeckDataGridView.RowHeadersWidth = 51;
             this.seeDeckDataGridView.RowTemplate.Height = 50;
-            this.seeDeckDataGridView.Size = new System.Drawing.Size(744, 248);
+            this.seeDeckDataGridView.Size = new System.Drawing.Size(992, 317);
             this.seeDeckDataGridView.TabIndex = 3;
             this.seeDeckDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seeDeckDataGridView_CellClick);
             // 
@@ -826,6 +843,7 @@ namespace YuGiOhCardManager
             // 
             this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column18.HeaderText = "Type";
+            this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
             this.Column18.Width = 120;
@@ -854,6 +872,7 @@ namespace YuGiOhCardManager
             // 
             this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column16.HeaderText = "";
+            this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             this.Column16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -863,6 +882,7 @@ namespace YuGiOhCardManager
             // 
             this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column17.HeaderText = "";
+            this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
             this.Column17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -876,10 +896,10 @@ namespace YuGiOhCardManager
             this.headerSeeDeckHeaderPanel.Controls.Add(this.searchSeeCardCardTextBox);
             this.headerSeeDeckHeaderPanel.Controls.Add(this.label4);
             this.headerSeeDeckHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerSeeDeckHeaderPanel.Location = new System.Drawing.Point(2, 2);
-            this.headerSeeDeckHeaderPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.headerSeeDeckHeaderPanel.Location = new System.Drawing.Point(3, 2);
+            this.headerSeeDeckHeaderPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.headerSeeDeckHeaderPanel.Name = "headerSeeDeckHeaderPanel";
-            this.headerSeeDeckHeaderPanel.Size = new System.Drawing.Size(744, 46);
+            this.headerSeeDeckHeaderPanel.Size = new System.Drawing.Size(992, 57);
             this.headerSeeDeckHeaderPanel.TabIndex = 1;
             // 
             // panel3
@@ -888,9 +908,10 @@ namespace YuGiOhCardManager
             this.panel3.Controls.Add(this.insertSeeDeckButton);
             this.panel3.Controls.Add(this.exportYdkButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(474, 0);
+            this.panel3.Location = new System.Drawing.Point(632, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 46);
+            this.panel3.Size = new System.Drawing.Size(360, 57);
             this.panel3.TabIndex = 21;
             // 
             // importYdkButton
@@ -908,10 +929,10 @@ namespace YuGiOhCardManager
             this.importYdkButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.importYdkButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.importYdkButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.importYdkButton.Location = new System.Drawing.Point(2, 3);
-            this.importYdkButton.Margin = new System.Windows.Forms.Padding(2);
+            this.importYdkButton.Location = new System.Drawing.Point(3, 4);
+            this.importYdkButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.importYdkButton.Name = "importYdkButton";
-            this.importYdkButton.Size = new System.Drawing.Size(88, 41);
+            this.importYdkButton.Size = new System.Drawing.Size(117, 50);
             this.importYdkButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.importYdkButton.TabIndex = 19;
             this.importYdkButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -934,10 +955,10 @@ namespace YuGiOhCardManager
             this.insertSeeDeckButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.insertSeeDeckButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.insertSeeDeckButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.insertSeeDeckButton.Location = new System.Drawing.Point(190, 3);
-            this.insertSeeDeckButton.Margin = new System.Windows.Forms.Padding(2);
+            this.insertSeeDeckButton.Location = new System.Drawing.Point(253, 4);
+            this.insertSeeDeckButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insertSeeDeckButton.Name = "insertSeeDeckButton";
-            this.insertSeeDeckButton.Size = new System.Drawing.Size(75, 41);
+            this.insertSeeDeckButton.Size = new System.Drawing.Size(100, 50);
             this.insertSeeDeckButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.insertSeeDeckButton.TabIndex = 17;
             this.insertSeeDeckButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -960,10 +981,10 @@ namespace YuGiOhCardManager
             this.exportYdkButton.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.exportYdkButton.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.exportYdkButton.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            this.exportYdkButton.Location = new System.Drawing.Point(94, 3);
-            this.exportYdkButton.Margin = new System.Windows.Forms.Padding(2);
+            this.exportYdkButton.Location = new System.Drawing.Point(125, 4);
+            this.exportYdkButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exportYdkButton.Name = "exportYdkButton";
-            this.exportYdkButton.Size = new System.Drawing.Size(92, 41);
+            this.exportYdkButton.Size = new System.Drawing.Size(123, 50);
             this.exportYdkButton.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.exportYdkButton.TabIndex = 18;
             this.exportYdkButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(200)))), ((int)(((byte)(185)))));
@@ -988,11 +1009,12 @@ namespace YuGiOhCardManager
             this.selectDeckComboBox.FormattingEnabled = true;
             this.selectDeckComboBox.IsDerivedStyle = true;
             this.selectDeckComboBox.ItemHeight = 20;
-            this.selectDeckComboBox.Location = new System.Drawing.Point(43, 11);
+            this.selectDeckComboBox.Location = new System.Drawing.Point(57, 14);
+            this.selectDeckComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.selectDeckComboBox.Name = "selectDeckComboBox";
             this.selectDeckComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.selectDeckComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.selectDeckComboBox.Size = new System.Drawing.Size(143, 26);
+            this.selectDeckComboBox.Size = new System.Drawing.Size(189, 26);
             this.selectDeckComboBox.Style = ReaLTaiizor.Enum.Metro.Style.Light;
             this.selectDeckComboBox.StyleManager = null;
             this.selectDeckComboBox.TabIndex = 7;
@@ -1005,20 +1027,19 @@ namespace YuGiOhCardManager
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(2, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 15);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 20;
             this.label3.Text = "Deck:";
             // 
             // searchSeeCardCardTextBox
             // 
             this.searchSeeCardCardTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searchSeeCardCardTextBox.Location = new System.Drawing.Point(249, 14);
-            this.searchSeeCardCardTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchSeeCardCardTextBox.Location = new System.Drawing.Point(332, 17);
+            this.searchSeeCardCardTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchSeeCardCardTextBox.Name = "searchSeeCardCardTextBox";
-            this.searchSeeCardCardTextBox.Size = new System.Drawing.Size(109, 23);
+            this.searchSeeCardCardTextBox.Size = new System.Drawing.Size(144, 27);
             this.searchSeeCardCardTextBox.TabIndex = 14;
             this.searchSeeCardCardTextBox.TextChanged += new System.EventHandler(this.searchSeeCardCardTextBox_TextChanged);
             // 
@@ -1027,10 +1048,9 @@ namespace YuGiOhCardManager
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(200, 17);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(267, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Search:";
             // 
@@ -1060,16 +1080,16 @@ namespace YuGiOhCardManager
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 447);
+            this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.fillPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.headerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1148,15 +1168,6 @@ namespace YuGiOhCardManager
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
@@ -1178,5 +1189,15 @@ namespace YuGiOhCardManager
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

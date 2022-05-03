@@ -162,6 +162,12 @@
     <Compile Include="AddDeckForm.Designer.cs">
       <DependentUpon>AddDeckForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfermForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MongoDB.cs" />
+    <Compile Include="OpenImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenImageForm.Designer.cs">
+      <DependentUpon>OpenImageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHandForm.cs">
@@ -213,6 +225,9 @@
     <EmbeddedResource Include="AddDeckForm.resx">
       <DependentUpon>AddDeckForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfermForm.resx">
       <DependentUpon>ConfermForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenImageForm.resx">
+      <DependentUpon>OpenImageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

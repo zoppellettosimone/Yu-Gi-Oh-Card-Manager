@@ -29,6 +29,9 @@ namespace YuGiOhCardManager
 
         DirectoryInfo d = new DirectoryInfo("..\\..\\..\\..\\..\\pics");
 
+        int timeForImage = 5;
+        Stopwatch timeForImageStopWatch = new Stopwatch();
+
         public UpdateImageForm(List<Dictionary<string, object>> apiToCopy)
         {
             WaitForm wf = new WaitForm();
@@ -42,7 +45,9 @@ namespace YuGiOhCardManager
 
             MRE.Reset();
 
-            int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+            List<string> fileList = d.GetFiles("*.jpg").Select(p => new string(p.Name.Replace(".jpg", "").ToCharArray())).ToList();
+
+            int nrFile = apiResList.Where(p => !fileList.Contains(p["imageId"].ToString())).Count();
             if(nrFile < 0)
             {
                 nrFile = 0;
@@ -58,7 +63,7 @@ namespace YuGiOhCardManager
             }
 
             nrImageLabel.Text = $"You have {nrFile} image to Download";
-            timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 5.1)} sec to wait";
+            timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * (timeForImage + 0.1))} sec to wait";
 
             wf.Close();
         }
@@ -107,7 +112,11 @@ namespace YuGiOhCardManager
                 {
                     if (d.GetFiles(item["imageId"].ToString() + ".jpg").Length == 0)
                     {
-                        int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+                        timeForImageStopWatch.Restart();
+
+                        List<string> fileList = d.GetFiles("*.jpg").Select(p => new string(p.Name.Replace(".jpg", "").ToCharArray())).ToList();
+
+                        int nrFile = apiResList.Where(p => !fileList.Contains(p["imageId"].ToString())).Count();
                         if (nrFile < 0)
                         {
                             nrFile = 0;
@@ -128,7 +137,7 @@ namespace YuGiOhCardManager
                                 updateImageButton.Refresh();
 
                                 nrImageLabel.Text = $"You are downloading {nrFile} images";
-                                timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * 5.1)} sec to wait";
+                                timeLabel.Text = $"[{DateTime.Now}] {Math.Truncate(nrFile * (timeForImage + 0.1))} sec to wait";
 
                                 nrImageLabel.Refresh();
                                 timeLabel.Refresh();
@@ -141,13 +150,20 @@ namespace YuGiOhCardManager
                             Console.WriteLine("MRE Off");
                             break;
                         }
+
+                        timeForImageStopWatch.Stop();
+
+                        timeForImage = int.Parse((timeForImageStopWatch.ElapsedMilliseconds/1000).ToString());
+
                     }
                 }
                 if (InvokeRequired)
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
-                        int nrFile = apiResList.Count() - d.GetFiles("*.jpg").Length;
+                        List<string> fileList = d.GetFiles("*.jpg").Select(p => new string(p.Name.Replace(".jpg", "").ToCharArray())).ToList();
+
+                        int nrFile = apiResList.Where(p => !fileList.Contains(p["imageId"].ToString())).Count();
                         if (nrFile < 0)
                         {
                             nrFile = 0;

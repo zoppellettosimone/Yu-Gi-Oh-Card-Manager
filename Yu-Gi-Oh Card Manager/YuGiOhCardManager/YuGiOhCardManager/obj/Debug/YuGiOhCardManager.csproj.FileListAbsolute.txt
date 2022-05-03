@@ -38,8 +38,6 @@ D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCar
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\bin\Debug\System.Security.Principal.Windows.xml
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.csproj.AssemblyReference.cache
-D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.Login.resources
-D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.Menu.resources
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.Properties.Resources.resources
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.csproj.GenerateResource.cache
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.csproj.CoreCompileInputs.cache
@@ -162,3 +160,15 @@ D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiO
 D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.csproj.CopyComplete
 D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.exe
 D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.pdb
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.csproj.SuggestedBindingRedirects.cache
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.AddCardForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.AddDeckForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.ConfermForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.HomeMenu.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.LoginForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.MenuForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.TestHandForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.UpdateImageForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.WaitForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.OpenImageForm.resources
+D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.AddUserForm.resources

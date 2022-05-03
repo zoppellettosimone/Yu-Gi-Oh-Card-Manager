@@ -56,7 +56,7 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(518, 65);
             this.headerPanel.TabIndex = 0;
@@ -98,7 +98,7 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(1, 504);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(518, 65);
             this.footerPanel.TabIndex = 1;
@@ -113,7 +113,7 @@ namespace YuGiOhCardManager
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 4;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -140,7 +140,7 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.userLabel);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fillPanel.Location = new System.Drawing.Point(1, 66);
-            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(4);
             this.fillPanel.Name = "fillPanel";
             this.fillPanel.Size = new System.Drawing.Size(518, 438);
             this.fillPanel.TabIndex = 3;
@@ -246,7 +246,7 @@ namespace YuGiOhCardManager
             this.Controls.Add(this.headerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddDeckForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

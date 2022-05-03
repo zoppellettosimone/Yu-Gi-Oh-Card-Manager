@@ -49,9 +49,10 @@ namespace YuGiOhCardManager
             this.footerPanel.Controls.Add(this.versionLabel);
             this.footerPanel.Controls.Add(this.footerCreditLabel);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(1, 205);
+            this.footerPanel.Location = new System.Drawing.Point(1, 253);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(478, 53);
+            this.footerPanel.Size = new System.Drawing.Size(638, 65);
             this.footerPanel.TabIndex = 0;
             // 
             // versionLabel
@@ -60,10 +61,11 @@ namespace YuGiOhCardManager
             this.versionLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.versionLabel.ForeColor = System.Drawing.Color.Gray;
             this.versionLabel.Location = new System.Drawing.Point(0, 0);
+            this.versionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(104, 53);
+            this.versionLabel.Size = new System.Drawing.Size(139, 65);
             this.versionLabel.TabIndex = 3;
-            this.versionLabel.Text = "Version 1.1";
+            this.versionLabel.Text = "Version 1.2";
             this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerCreditLabel
@@ -72,9 +74,8 @@ namespace YuGiOhCardManager
             this.footerCreditLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.footerCreditLabel.ForeColor = System.Drawing.Color.Gray;
             this.footerCreditLabel.Location = new System.Drawing.Point(0, 0);
-            this.footerCreditLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.footerCreditLabel.Name = "footerCreditLabel";
-            this.footerCreditLabel.Size = new System.Drawing.Size(478, 53);
+            this.footerCreditLabel.Size = new System.Drawing.Size(638, 65);
             this.footerCreditLabel.TabIndex = 1;
             this.footerCreditLabel.Text = "Created By Simone Zoppelletto";
             this.footerCreditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,8 +86,9 @@ namespace YuGiOhCardManager
             this.headerPanel.Controls.Add(this.headerCreditsLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(1, 1);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(478, 53);
+            this.headerPanel.Size = new System.Drawing.Size(638, 65);
             this.headerPanel.TabIndex = 1;
             // 
             // headerCreditsLabel
@@ -95,9 +97,8 @@ namespace YuGiOhCardManager
             this.headerCreditsLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.headerCreditsLabel.ForeColor = System.Drawing.Color.Gray;
             this.headerCreditsLabel.Location = new System.Drawing.Point(0, 0);
-            this.headerCreditsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerCreditsLabel.Name = "headerCreditsLabel";
-            this.headerCreditsLabel.Size = new System.Drawing.Size(478, 53);
+            this.headerCreditsLabel.Size = new System.Drawing.Size(638, 65);
             this.headerCreditsLabel.TabIndex = 2;
             this.headerCreditsLabel.Text = "Yu-Gi-Oh Card Manager";
             this.headerCreditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,9 +109,10 @@ namespace YuGiOhCardManager
             this.fillPanel.Controls.Add(this.title2Label);
             this.fillPanel.Controls.Add(this.titleLabel);
             this.fillPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fillPanel.Location = new System.Drawing.Point(1, 54);
+            this.fillPanel.Location = new System.Drawing.Point(1, 66);
+            this.fillPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fillPanel.Name = "fillPanel";
-            this.fillPanel.Size = new System.Drawing.Size(478, 151);
+            this.fillPanel.Size = new System.Drawing.Size(638, 187);
             this.fillPanel.TabIndex = 2;
             // 
             // title2Label
@@ -118,10 +120,9 @@ namespace YuGiOhCardManager
             this.title2Label.AutoSize = true;
             this.title2Label.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.title2Label.ForeColor = System.Drawing.Color.Gray;
-            this.title2Label.Location = new System.Drawing.Point(203, 88);
-            this.title2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title2Label.Location = new System.Drawing.Point(271, 108);
             this.title2Label.Name = "title2Label";
-            this.title2Label.Size = new System.Drawing.Size(71, 30);
+            this.title2Label.Size = new System.Drawing.Size(89, 37);
             this.title2Label.TabIndex = 10;
             this.title2Label.Text = "Wait...";
             // 
@@ -130,23 +131,23 @@ namespace YuGiOhCardManager
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.titleLabel.ForeColor = System.Drawing.Color.Gray;
-            this.titleLabel.Location = new System.Drawing.Point(52, 33);
-            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titleLabel.Location = new System.Drawing.Point(69, 41);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(384, 46);
+            this.titleLabel.Size = new System.Drawing.Size(478, 57);
             this.titleLabel.TabIndex = 9;
             this.titleLabel.Text = "Yu-Gi-Oh Card Manager";
             // 
             // WaitForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 259);
+            this.ClientSize = new System.Drawing.Size(640, 319);
             this.Controls.Add(this.fillPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.footerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WaitForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

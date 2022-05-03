@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2ccdc1ca-7fd2-4804-a85e-fbb4bd7250e3": {
+      "ProjectGuid": "2ccdc1ca-7fd2-4804-a85e-fbb4bd7250e3",
+      "DisplayName": "YuGiOhCardManager",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

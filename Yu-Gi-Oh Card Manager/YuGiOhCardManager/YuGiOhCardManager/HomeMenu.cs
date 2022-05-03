@@ -144,5 +144,40 @@ namespace YuGiOhCardManager
             uif.ShowDialog();
             this.Visible = true;
         }
+
+        private void addNewUserButton_Click(object sender, EventArgs e)
+        {
+            AddUserForm auf = new AddUserForm();
+            auf.ShowDialog();
+
+            if (auf.DialogResult == DialogResult.OK)
+            {
+                //Inserimento nuovo utente
+                try
+                {
+                    //Controllo connessione MongoDB
+                    if (MongoDB.IsConnected())
+                    {
+                        //Nuovo Dict da inserire
+                        Dictionary<string, object> dictToInsert = new Dictionary<string, object>();
+                        dictToInsert.Add("user", auf.userTextBox.Text);
+                        dictToInsert.Add("password", auf.passwordTextBox.Text);
+
+                        //InsertOne MongoDb
+                        MongoDB.Client.GetDatabase("yugiohCardDb")
+                            .GetCollection<Dictionary<string, object>>("User")
+                            .InsertOne(dictToInsert);
+                    }
+                }
+                catch (Exception err)
+                {
+                    /*
+                    string Message = $"{err.StackTrace}\n{err.Message}";
+                    Console.WriteLine(Message);
+                    */
+                }
+
+            }
+        }
     }
 }

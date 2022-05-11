@@ -186,7 +186,7 @@ namespace YuGiOhCardManager
                 SeeListMyDeck();
 
                 selectDeckComboBox.Items.Clear();
-                selectDeckComboBox.Items.AddRange(mongoDbMyDeck.Select(s => new string(s["name"].ToString().ToCharArray())).ToArray());
+                selectDeckComboBox.Items.AddRange(mongoDbMyDeck.OrderBy(p => p["name"]).Select(s => new string(s["name"].ToString().ToCharArray())).ToArray());
 
                 if (selectDeckComboBox.Items.Count > 0)
                 {
@@ -250,7 +250,7 @@ namespace YuGiOhCardManager
         {
             DataGridViewRow row = (DataGridViewRow)searchCardDataGridView.Rows[0].Clone();
 
-            row.Cells[0].Value = "🖊";
+            row.Cells[0].Value = "🔎";
 
             row.Cells[1].Value = item["name"];
 
@@ -549,7 +549,7 @@ namespace YuGiOhCardManager
 
             List<DataGridViewRow> listRow = new List<DataGridViewRow>();
 
-            mongoDbMyDeck.Where(p => p["name"].ToString().ToLower().Replace(" ", "").Contains(searcMyDeckTextBox.Text.Replace(" ", ""))).ToList().ForEach(p => listRow.Add(DrawOneMyDeck(p)));
+            mongoDbMyDeck.Where(p => p["name"].ToString().ToLower().Replace(" ", "").Contains(searcMyDeckTextBox.Text.Replace(" ", ""))).OrderBy(p => p["name"]).ToList().ForEach(p => listRow.Add(DrawOneMyDeck(p)));
 
             myDeckDataGridView.Rows.AddRange(listRow.ToArray());
 
@@ -915,6 +915,8 @@ namespace YuGiOhCardManager
 
                 //Aggiornamento tab
                 UpdateListSeeDeck();
+
+                UpdateListMyDeck();
             }
         }
 
@@ -1182,6 +1184,8 @@ namespace YuGiOhCardManager
 
                         //Aggiornamento Lista
                         UpdateListSeeDeck();
+
+                        UpdateListMyDeck();
                     }
                 }
                 //Colonna di delete
@@ -1202,6 +1206,8 @@ namespace YuGiOhCardManager
 
                         //Aggiornamento Lista
                         UpdateListSeeDeck();
+
+                        UpdateListMyDeck();
                     }
                 }
             }

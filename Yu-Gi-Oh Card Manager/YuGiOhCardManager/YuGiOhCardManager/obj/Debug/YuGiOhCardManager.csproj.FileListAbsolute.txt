@@ -172,3 +172,5 @@ D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCar
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.WaitForm.resources
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.OpenImageForm.resources
 D:\GitHubRep\yugiohCardManager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.AddUserForm.resources
+D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.AddUserForm.resources
+D:\GitHubRep\Yu-Gi-Oh-Card-Manager\Yu-Gi-Oh Card Manager\YuGiOhCardManager\YuGiOhCardManager\obj\Debug\YuGiOhCardManager.OpenImageForm.resources

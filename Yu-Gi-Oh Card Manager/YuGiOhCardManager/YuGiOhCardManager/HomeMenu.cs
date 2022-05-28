@@ -179,5 +179,10 @@ namespace YuGiOhCardManager
 
             }
         }
+
+        private void headerCreditsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

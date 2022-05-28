@@ -89,7 +89,7 @@ namespace YuGiOhCardManager
                 string allYdkText = File.ReadAllText(openFileDialog.FileName, Encoding.UTF8);
                 int indexYdkStart = allYdkText.IndexOf("#main");
                 int indexYdkEnd = allYdkText.IndexOf("!side");
-                if(indexYdkEnd == -1)
+                if (indexYdkEnd == -1)
                 {
                     indexYdkEnd = allYdkText.Length;
                 }
@@ -164,156 +164,163 @@ namespace YuGiOhCardManager
 
             //Console.WriteLine(testSpeedShuffle.ElapsedMilliseconds);
 
-            if(idListFromYdkToUse.Count > 0)
+            if (idListFromYdkToUse.Count > 0)
             {
-                int img1 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
-                idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
-                var fileImg1 = d.GetFiles(img1 + ".jpg");
-                if(fileImg1.Length > 0)
+                try
                 {
-                    pictureBox1.Image = Image.FromFile(d + "\\" + img1.ToString() + ".jpg");
-                }
-                else
-                {
-                    pictureBox1.Image = Resources.unknownCard;
-                }
-                var nameImg1 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img1).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                if(nameImg1.Length > 26)
-                {
-                    nameImg1 = nameImg1.Substring(0, 26);
-                }
-                if(nameImg1 != null)
-                {
-                    nameCardLabel1.Text = nameImg1;
-                }
-                else
-                {
-                    nameCardLabel1.Text = "Card Not Found";
-                }
-
-                if(idListFromYdkToUse.Count > 0)
-                {
-                    int img2 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
+                    int img1 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
                     idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
-                    var fileImg2 = d.GetFiles(img2 + ".jpg");
-                    if (fileImg2.Length > 0)
+                    var fileImg1 = d.GetFiles(img1 + ".jpg");
+                    if (fileImg1.Length > 0)
                     {
-                        pictureBox2.Image = Image.FromFile(d + "\\" + img2.ToString() + ".jpg");
+                        pictureBox1.Image = Image.FromFile(d + "\\" + img1.ToString() + ".jpg");
                     }
                     else
                     {
-                        pictureBox2.Image = Resources.unknownCard;
+                        pictureBox1.Image = Resources.unknownCard;
                     }
-                    var nameImg2 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img2).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                    if (nameImg2.Length > 26)
+                    var nameImg1 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img1).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
+                    if (nameImg1 != null && nameImg1.Length > 26)
                     {
-                        nameImg2 = nameImg2.Substring(0, 26);
+                        nameImg1 = nameImg1.Substring(0, 26);
                     }
-                    if (nameImg2 != null)
+                    if (nameImg1 != null)
                     {
-                        nameCardLabel2.Text = nameImg2;
+                        nameCardLabel1.Text = nameImg1;
                     }
                     else
                     {
-                        nameCardLabel2.Text = "Card Not Found";
+                        nameCardLabel1.Text = "Card Not Found";
                     }
 
                     if (idListFromYdkToUse.Count > 0)
                     {
-                        int img3 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
+                        int img2 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
                         idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
-                        var fileImg3 = d.GetFiles(img3 + ".jpg");
-                        if (fileImg3.Length > 0)
+                        var fileImg2 = d.GetFiles(img2 + ".jpg");
+                        if (fileImg2.Length > 0)
                         {
-                            pictureBox3.Image = Image.FromFile(d + "\\" + img3.ToString() + ".jpg");
+                            pictureBox2.Image = Image.FromFile(d + "\\" + img2.ToString() + ".jpg");
                         }
                         else
                         {
-                            pictureBox3.Image = Resources.unknownCard;
+                            pictureBox2.Image = Resources.unknownCard;
                         }
-                        var nameImg3 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img3).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                        if (nameImg3.Length > 26)
+                        var nameImg2 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img2).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
+                        if (nameImg2 != null && nameImg2.Length > 26)
                         {
-                            nameImg3 = nameImg3.Substring(0, 26);
+                            nameImg2 = nameImg2.Substring(0, 26);
                         }
-                        if (nameImg3 != null)
+                        if (nameImg2 != null)
                         {
-                            nameCardLabel3.Text = nameImg3;
+                            nameCardLabel2.Text = nameImg2;
                         }
                         else
                         {
-                            nameCardLabel3.Text = "Card Not Found";
+                            nameCardLabel2.Text = "Card Not Found";
                         }
 
                         if (idListFromYdkToUse.Count > 0)
                         {
-                            int img4 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
+                            int img3 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
                             idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
-                            var fileImg4 = d.GetFiles(img4 + ".jpg");
-                            if (fileImg4.Length > 0)
+                            var fileImg3 = d.GetFiles(img3 + ".jpg");
+                            if (fileImg3.Length > 0)
                             {
-                                pictureBox4.Image = Image.FromFile(d + "\\" + img4.ToString() + ".jpg");
+                                pictureBox3.Image = Image.FromFile(d + "\\" + img3.ToString() + ".jpg");
                             }
                             else
                             {
-                                pictureBox4.Image = Resources.unknownCard;
+                                pictureBox3.Image = Resources.unknownCard;
                             }
-                            var nameImg4 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img4).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                            if (nameImg4.Length > 26)
+                            var nameImg3 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img3).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
+                            if (nameImg3 != null && nameImg3.Length > 26)
                             {
-                                nameImg4 = nameImg4.Substring(0, 26);
+                                nameImg3 = nameImg3.Substring(0, 26);
                             }
-                            if (nameImg4 != null)
+                            if (nameImg3 != null)
                             {
-                                nameCardLabel4.Text = nameImg4;
+                                nameCardLabel3.Text = nameImg3;
                             }
                             else
                             {
-                                nameCardLabel4.Text = "Card Not Found";
+                                nameCardLabel3.Text = "Card Not Found";
                             }
 
                             if (idListFromYdkToUse.Count > 0)
                             {
-                                int img5 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
+                                int img4 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
                                 idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
-                                var fileImg5 = d.GetFiles(img5 + ".jpg");
-                                if (fileImg5.Length > 0)
+                                var fileImg4 = d.GetFiles(img4 + ".jpg");
+                                if (fileImg4.Length > 0)
                                 {
-                                    pictureBox5.Image = Image.FromFile(d + "\\" + img5.ToString() + ".jpg");
+                                    pictureBox4.Image = Image.FromFile(d + "\\" + img4.ToString() + ".jpg");
                                 }
                                 else
                                 {
-                                    pictureBox5.Image = Resources.unknownCard;
+                                    pictureBox4.Image = Resources.unknownCard;
                                 }
-                                var nameImg5 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img5).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                                if (nameImg5.Length > 26)
+                                var nameImg4 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img4).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
+                                if (nameImg4 != null && nameImg4.Length > 26)
                                 {
-                                    nameImg5 = nameImg5.Substring(0, 26);
+                                    nameImg4 = nameImg4.Substring(0, 26);
                                 }
-                                if (nameImg5 != null)
+                                if (nameImg4 != null)
                                 {
-                                    nameCardLabel5.Text = nameImg5;
+                                    nameCardLabel4.Text = nameImg4;
                                 }
                                 else
                                 {
-                                    nameCardLabel5.Text = "Card Not Found";
+                                    nameCardLabel4.Text = "Card Not Found";
+                                }
+
+                                if (idListFromYdkToUse.Count > 0)
+                                {
+                                    int img5 = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
+                                    idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
+                                    var fileImg5 = d.GetFiles(img5 + ".jpg");
+                                    if (fileImg5.Length > 0)
+                                    {
+                                        pictureBox5.Image = Image.FromFile(d + "\\" + img5.ToString() + ".jpg");
+                                    }
+                                    else
+                                    {
+                                        pictureBox5.Image = Resources.unknownCard;
+                                    }
+                                    var nameImg5 = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img5).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
+                                    if (nameImg5 != null && nameImg5.Length > 26)
+                                    {
+                                        nameImg5 = nameImg5.Substring(0, 26);
+                                    }
+                                    if (nameImg5 != null)
+                                    {
+                                        nameCardLabel5.Text = nameImg5;
+                                    }
+                                    else
+                                    {
+                                        nameCardLabel5.Text = "Card Not Found";
+                                    }
                                 }
                             }
                         }
                     }
+                }
+                catch (Exception err)
+                {
+                    var a = err;
                 }
             }
         }
 
         private void plusOneButton_Click(object sender, EventArgs e)
         {
-            if(idListFromYdkToUse.Count > 0)
+            if (idListFromYdkToUse.Count > 0)
             {
                 int img = idListFromYdkToUse[idListFromYdkToUse.Count - 1];
                 idListFromYdkToUse.RemoveAt(idListFromYdkToUse.Count - 1);
                 var fileImg = d.GetFiles(img + ".jpg");
                 var nameImg = apiResList.Where(p => int.Parse(p["imageId"].ToString()) == img).Select(p => new string(p["name"].ToString().ToCharArray())).FirstOrDefault();
-                if (nameImg.Length > 26)
+                if (nameImg != null && nameImg.Length > 26)
                 {
                     nameImg = nameImg.Substring(0, 26);
                 }

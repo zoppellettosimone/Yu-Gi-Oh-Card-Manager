@@ -168,7 +168,7 @@ namespace YuGiOhCardManager
         }
 
         //Aggiornamento Lista
-        private void UpdateListMyDeck()
+        private void UpdateListMyDeck([Optional] bool changeSelectDeck)
         {
 
             if (checkConnection() == true)
@@ -176,6 +176,8 @@ namespace YuGiOhCardManager
                 //Se è connesso
 
                 // PRENDERE I DATI DALLE TAB SU MONGODB
+
+                var selectIndexBeforeClear = selectDeckComboBox.SelectedIndex;
 
                 mongoDbMyDeck = MongoDB.Client
                     .GetDatabase("yugiohCardDb")
@@ -188,12 +190,17 @@ namespace YuGiOhCardManager
                 selectDeckComboBox.Items.Clear();
                 selectDeckComboBox.Items.AddRange(mongoDbMyDeck.OrderBy(p => p["name"]).Select(s => new string(s["name"].ToString().ToCharArray())).ToArray());
 
-                if (selectDeckComboBox.Items.Count > 0)
+                if(changeSelectDeck != true)
                 {
-                    selectDeckComboBox.SelectedIndex = 0;
+                    if (selectDeckComboBox.Items.Count > 0)
+                    {
+                        selectDeckComboBox.SelectedIndex = 0;
+                    }
                 }
-
-
+                else
+                {
+                    selectDeckComboBox.SelectedIndex = selectIndexBeforeClear;
+                }
             }
             else
             {
@@ -916,7 +923,7 @@ namespace YuGiOhCardManager
                 //Aggiornamento tab
                 UpdateListSeeDeck();
 
-                UpdateListMyDeck();
+                UpdateListMyDeck(true);
             }
         }
 
@@ -1083,7 +1090,7 @@ namespace YuGiOhCardManager
                 UpdateListSeeDeck();
 
                 //Aggiornamento vista deck
-                UpdateListMyDeck();
+                UpdateListMyDeck(true);
             }
         }
 
@@ -1185,7 +1192,7 @@ namespace YuGiOhCardManager
                         //Aggiornamento Lista
                         UpdateListSeeDeck();
 
-                        UpdateListMyDeck();
+                        UpdateListMyDeck(true);
                     }
                 }
                 //Colonna di delete
@@ -1207,7 +1214,7 @@ namespace YuGiOhCardManager
                         //Aggiornamento Lista
                         UpdateListSeeDeck();
 
-                        UpdateListMyDeck();
+                        UpdateListMyDeck(true);
                     }
                 }
             }

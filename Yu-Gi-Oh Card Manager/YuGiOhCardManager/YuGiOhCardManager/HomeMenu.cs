@@ -107,7 +107,22 @@ namespace YuGiOhCardManager
                 //Conversione da Json String a Json
                 var allJsonContent = JObject.Parse(jsonString);
 
-                var test = allJsonContent["data"].Where(p => p["name"].ToString().ToLower().Contains("mysterune")).ToList();
+                var test = allJsonContent["data"].Where(p => p["name"].ToString().ToLower().Contains("fraktall")).ToList();
+
+                foreach (var testItem in allJsonContent["data"])
+                {
+                    try
+                    {
+                        int a = testItem.ToObject<JObject>().ContainsKey("atk") == true && testItem["atk"].ToString() != "" ? int.Parse(testItem["atk"].ToString()) : 0;
+                        int b = testItem.ToObject<JObject>().ContainsKey("def") == true && testItem["def"].ToString() != "" ? int.Parse(testItem["def"].ToString()) : 0;
+                        int c = testItem.ToObject<JObject>().ContainsKey("level") == true && testItem["level"].ToString() != "" ? int.Parse(testItem["level"].ToString()) : 0;
+                        int d = testItem.ToObject<JObject>().ContainsKey("linkval") == true && testItem["linkval"].ToString() != "" ? int.Parse(testItem["linkval"].ToString()) : 0;
+                    }catch(Exception err)
+                    {
+                        string aa = testItem["atk"].ToString();
+                        Console.WriteLine(err.Message);
+                    }
+                }
 
                 //Estrazione dei dati
                 apiResList = allJsonContent["data"].Select(s => new Dictionary<string, object> {
@@ -115,11 +130,11 @@ namespace YuGiOhCardManager
                             { "type", s["type"].ToString()},
                             { "race", s["race"].ToString()},
                             { "desc", s["desc"].ToString()},
-                            { "attribute", s.ToObject<JObject>().ContainsKey("attribute") == true ? s["attribute"].ToString() : "Null" },
-                            { "atk", s.ToObject<JObject>().ContainsKey("atk") == true ? int.Parse(s["atk"].ToString()) : 0},
-                            { "def", s.ToObject<JObject>().ContainsKey("def") == true ? int.Parse(s["def"].ToString()) : 0},
-                            { "level", s.ToObject<JObject>().ContainsKey("level") == true ? int.Parse(s["level"].ToString()) : 0},
-                            { "linkval", s.ToObject<JObject>().ContainsKey("linkval") == true ? int.Parse(s["linkval"].ToString()) : 0},
+                            { "attribute", s.ToObject<JObject>().ContainsKey("attribute") == true && s["atk"].ToString() != "" ? s["attribute"].ToString() : "Null" },
+                            { "atk", s.ToObject<JObject>().ContainsKey("atk") == true && s["atk"].ToString() != "" ? int.Parse(s["atk"].ToString()) : 0},
+                            { "def", s.ToObject<JObject>().ContainsKey("def") == true && s["def"].ToString() != "" ? int.Parse(s["def"].ToString()) : 0},
+                            { "level", s.ToObject<JObject>().ContainsKey("level") == true && s["level"].ToString() != "" ? int.Parse(s["level"].ToString()) : 0},
+                            { "linkval", s.ToObject<JObject>().ContainsKey("linkval") == true && s["linkval"].ToString() != "" ? int.Parse(s["linkval"].ToString()) : 0},
                             { "imageId", s["card_images"][0]["id"].ToString()},
                             { "price", s["card_prices"][0]["cardmarket_price"].ToString()}
                                 })
@@ -130,10 +145,8 @@ namespace YuGiOhCardManager
             }
             catch (Exception err)
             {
-                /*
                 string Message = $"{err.StackTrace}\n{err.Message}";
                 Console.WriteLine(Message);
-                */
             }
         }
 

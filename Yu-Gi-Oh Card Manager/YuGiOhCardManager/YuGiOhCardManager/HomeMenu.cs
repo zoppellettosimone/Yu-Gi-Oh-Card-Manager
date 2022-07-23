@@ -109,21 +109,6 @@ namespace YuGiOhCardManager
 
                 var test = allJsonContent["data"].Where(p => p["name"].ToString().ToLower().Contains("fraktall")).ToList();
 
-                foreach (var testItem in allJsonContent["data"])
-                {
-                    try
-                    {
-                        int a = testItem.ToObject<JObject>().ContainsKey("atk") == true && testItem["atk"].ToString() != "" ? int.Parse(testItem["atk"].ToString()) : 0;
-                        int b = testItem.ToObject<JObject>().ContainsKey("def") == true && testItem["def"].ToString() != "" ? int.Parse(testItem["def"].ToString()) : 0;
-                        int c = testItem.ToObject<JObject>().ContainsKey("level") == true && testItem["level"].ToString() != "" ? int.Parse(testItem["level"].ToString()) : 0;
-                        int d = testItem.ToObject<JObject>().ContainsKey("linkval") == true && testItem["linkval"].ToString() != "" ? int.Parse(testItem["linkval"].ToString()) : 0;
-                    }catch(Exception err)
-                    {
-                        string aa = testItem["atk"].ToString();
-                        Console.WriteLine(err.Message);
-                    }
-                }
-
                 //Estrazione dei dati
                 apiResList = allJsonContent["data"].Select(s => new Dictionary<string, object> {
                             { "name", s["name"].ToString() },
@@ -136,7 +121,10 @@ namespace YuGiOhCardManager
                             { "level", s.ToObject<JObject>().ContainsKey("level") == true && s["level"].ToString() != "" ? int.Parse(s["level"].ToString()) : 0},
                             { "linkval", s.ToObject<JObject>().ContainsKey("linkval") == true && s["linkval"].ToString() != "" ? int.Parse(s["linkval"].ToString()) : 0},
                             { "imageId", s["card_images"][0]["id"].ToString()},
-                            { "price", s["card_prices"][0]["cardmarket_price"].ToString()}
+                            { "price", s["card_prices"][0]["cardmarket_price"].ToString()},
+                            { "sets", s.ToObject<JObject>().ContainsKey("card_sets") == true ? s["card_sets"].Select(p => new Dictionary<string, object> {
+                                { "set", p["set_code"].ToString() }
+                            }).ToList() : new List<Dictionary<string, object>>()}
                                 })
                                 .ToList();
 
@@ -191,11 +179,6 @@ namespace YuGiOhCardManager
                 }
 
             }
-        }
-
-        private void headerCreditsLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

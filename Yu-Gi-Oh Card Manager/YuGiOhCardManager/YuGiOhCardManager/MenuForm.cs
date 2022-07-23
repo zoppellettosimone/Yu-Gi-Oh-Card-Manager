@@ -1228,9 +1228,9 @@ namespace YuGiOhCardManager
 
         private void searchCardDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 0)
+            if(e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
-                OpenImageForm oif = new OpenImageForm(apiResList.Where(p => p["name"].Equals(searchCardDataGridView[1, e.RowIndex].Value)).Select(p => new string(p["imageId"].ToString().ToCharArray())).FirstOrDefault());
+                OpenImageForm oif = new OpenImageForm(apiResList.Where(p => p["name"].Equals(searchCardDataGridView[1, e.RowIndex].Value)).FirstOrDefault());
 
                 oif.ShowDialog();
             }

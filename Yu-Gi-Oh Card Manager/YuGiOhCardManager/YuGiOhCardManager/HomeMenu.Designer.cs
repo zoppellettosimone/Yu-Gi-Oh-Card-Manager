@@ -88,7 +88,6 @@ namespace YuGiOhCardManager
             this.headerCreditsLabel.TabIndex = 2;
             this.headerCreditsLabel.Text = "Yu-Gi-Oh Card Manager";
             this.headerCreditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.headerCreditsLabel.Click += new System.EventHandler(this.headerCreditsLabel_Click);
             this.headerCreditsLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.headerCreditsLabel_MouseMove);
             // 
             // footerPanel

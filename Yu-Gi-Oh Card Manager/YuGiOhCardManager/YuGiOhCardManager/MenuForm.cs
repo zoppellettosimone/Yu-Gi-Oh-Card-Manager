@@ -758,6 +758,13 @@ namespace YuGiOhCardManager
                         UpdateListWishlist();
                     }
                 }
+                //Colonna Img
+                else if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+                {
+                    OpenImageForm oif = new OpenImageForm(apiResList.Where(p => p["name"].Equals(wishlistDataGridView[1, e.RowIndex].Value)).FirstOrDefault());
+
+                    oif.ShowDialog();
+                }
             }
         }
 
@@ -1216,6 +1223,13 @@ namespace YuGiOhCardManager
 
                         UpdateListMyDeck(true);
                     }
+                }
+                //Colonna Img
+                else if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+                {
+                    OpenImageForm oif = new OpenImageForm(apiResList.Where(p => p["name"].Equals(seeDeckDataGridView[1, e.RowIndex].Value)).FirstOrDefault());
+
+                    oif.ShowDialog();
                 }
             }
         }

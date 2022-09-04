@@ -47,48 +47,62 @@ namespace YuGiOhCardManager
                 pictureBox.Image = Resources.unknownCard;
             }
 
+            //Variabile usata per i controlli di connessione con l'API
+            bool checkConnecgionAPI = true;
+
             foreach (var s in (List<Dictionary<string, object>>)card["sets"])
             {
-
-                // Stringa Json dalla chiamata Api
-                string jsonStringFromMyApi = "";
-
-                //Chiamata My Api
-                Uri addressMyApi = new Uri($"http://127.0.0.1:8000/searchCard/ {s["set"]}");
-                HttpWebRequest requestMyApi = WebRequest.Create(addressMyApi) as HttpWebRequest;
-                requestMyApi.Method = "GET";
-                requestMyApi.ContentType = "text/json";
-
-                try
+                if(checkConnecgionAPI == true)
                 {
-                    //Salvataggio su "jsonString" della risposta
-                    using (HttpWebResponse response = requestMyApi.GetResponse() as HttpWebResponse)
-                    {
-                        StreamReader reader = new StreamReader(response.GetResponseStream());
-                        jsonStringFromMyApi = reader.ReadToEnd();
-                    }
-                }
-                catch (Exception err)
-                {
-                    string Message = $"{err.StackTrace}\n{err.Message}";
-                    Console.WriteLine(Message);
-                }
+                    // Stringa Json dalla chiamata Api
+                    string jsonStringFromMyApi = "";
 
-                //Controllo non sia vuota
-                if (!jsonStringFromMyApi.Replace(" ", "").Equals(""))
-                {
+                    //Chiamata My Api
+                    Uri addressMyApi = new Uri($"http://127.0.0.1:8000/searchCard/ {s["set"]}");
+                    HttpWebRequest requestMyApi = WebRequest.Create(addressMyApi) as HttpWebRequest;
+                    requestMyApi.Method = "GET";
+                    requestMyApi.ContentType = "text/json";
+
                     try
                     {
-                        //Conversione da Json String a Json
-                        var allJsonFromMyApi = JObject.Parse(jsonStringFromMyApi);
-                        s.Add("price", double.Parse(allJsonFromMyApi["price"].ToString()));
+                        //Salvataggio su "jsonString" della risposta
+                        using (HttpWebResponse response = requestMyApi.GetResponse() as HttpWebResponse)
+                        {
+                            StreamReader reader = new StreamReader(response.GetResponseStream());
+                            jsonStringFromMyApi = reader.ReadToEnd();
+                        }
                     }
                     catch (Exception err)
                     {
                         string Message = $"{err.StackTrace}\n{err.Message}";
                         Console.WriteLine(Message);
+
+                        //False = Errore con l'API
+                        checkConnecgionAPI = false;
+                    }
+
+                    //Controllo non sia vuota
+                    if (!jsonStringFromMyApi.Replace(" ", "").Equals(""))
+                    {
+                        try
+                        {
+                            //Conversione da Json String a Json
+                            var allJsonFromMyApi = JObject.Parse(jsonStringFromMyApi);
+                            s.Add("price", double.Parse(allJsonFromMyApi["price"].ToString()));
+                        }
+                        catch (Exception err)
+                        {
+                            string Message = $"{err.StackTrace}\n{err.Message}";
+                            Console.WriteLine(Message);
+                        }
                     }
                 }
+                else
+                {
+                    s.Add("price", 0.00);
+                }
+
+                
             }
 
             setsDataGridView.AllowUserToAddRows = true;

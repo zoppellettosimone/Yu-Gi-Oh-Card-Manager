@@ -52,8 +52,6 @@ namespace YuGiOhCardManager
 
             foreach (var s in (List<Dictionary<string, object>>)card["sets"])
             {
-                if(checkConnecgionAPI == true)
-                {
                     // Stringa Json dalla chiamata Api
                     string jsonStringFromMyApi = "";
 
@@ -94,15 +92,12 @@ namespace YuGiOhCardManager
                         {
                             string Message = $"{err.StackTrace}\n{err.Message}";
                             Console.WriteLine(Message);
+                            
+                            s.Add("price", 0.0);
                         }
+                    }else{
+                        s.Add("price", 0.0);
                     }
-                }
-                else
-                {
-                    s.Add("price", 0.00);
-                }
-
-                
             }
 
             setsDataGridView.AllowUserToAddRows = true;

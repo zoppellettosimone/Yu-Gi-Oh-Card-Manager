@@ -5,6 +5,12 @@ from bs4 import BeautifulSoup
 
 app = FastAPI()
 
+#Route to find if the API work normally or not
+@app.get("/iAmLive")
+async def root(textToSearch):
+    return {"response": true}
+
+#Route to search a card prize
 @app.get("/searchCard/{textToSearch}")
 async def root(textToSearch):
     newLink = link + textToSearch

@@ -9,7 +9,6 @@ using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using YuGiOhCardManager.Properties;
 
@@ -24,6 +23,8 @@ namespace YuGiOhCardManager
 
         DirectoryInfo d = new DirectoryInfo("..\\..\\..\\..\\..\\pics");
 
+        int nrSets = 0;
+
         public OpenImageForm(Dictionary<string, object> card)
         {
 
@@ -33,6 +34,8 @@ namespace YuGiOhCardManager
             wf.Refresh();
 
             InitializeComponent();
+
+            nrSets = 0;
 
             var file = d.GetFiles(card["imageId"].ToString() + ".jpg");
 
@@ -47,57 +50,38 @@ namespace YuGiOhCardManager
                 pictureBox.Image = Resources.unknownCard;
             }
 
-            //Variabile usata per i controlli di connessione con l'API
-            bool checkConnecgionAPI = true;
+            //variabile True se l'API è attiva e False in caso di risposta non avuta
+            bool statusAPI = checkApiLive();
 
+            nrSets = ((List<Dictionary<string, object>>)card["sets"]).Count();
+
+            //DA MODIFICARE
             foreach (var s in (List<Dictionary<string, object>>)card["sets"])
             {
-                    // Stringa Json dalla chiamata Api
-                    string jsonStringFromMyApi = "";
 
-                    //Chiamata My Api
-                    Uri addressMyApi = new Uri($"http://127.0.0.1:8000/searchCard/ {s["set"]}");
-                    HttpWebRequest requestMyApi = WebRequest.Create(addressMyApi) as HttpWebRequest;
-                    requestMyApi.Method = "GET";
-                    requestMyApi.ContentType = "text/json";
+                if (statusAPI == true)
+                {
+                    requestPriceAPI(s);
 
-                    try
+                    
+                }
+                else
+                {
+                    if (s.ContainsKey("price") == false)
                     {
-                        //Salvataggio su "jsonString" della risposta
-                        using (HttpWebResponse response = requestMyApi.GetResponse() as HttpWebResponse)
-                        {
-                            StreamReader reader = new StreamReader(response.GetResponseStream());
-                            jsonStringFromMyApi = reader.ReadToEnd();
-                        }
-                    }
-                    catch (Exception err)
-                    {
-                        string Message = $"{err.StackTrace}\n{err.Message}";
-                        Console.WriteLine(Message);
-
-                        //False = Errore con l'API
-                        checkConnecgionAPI = false;
-                    }
-
-                    //Controllo non sia vuota
-                    if (!jsonStringFromMyApi.Replace(" ", "").Equals(""))
-                    {
-                        try
-                        {
-                            //Conversione da Json String a Json
-                            var allJsonFromMyApi = JObject.Parse(jsonStringFromMyApi);
-                            s.Add("price", double.Parse(allJsonFromMyApi["price"].ToString()));
-                        }
-                        catch (Exception err)
-                        {
-                            string Message = $"{err.StackTrace}\n{err.Message}";
-                            Console.WriteLine(Message);
-                            
-                            s.Add("price", 0.0);
-                        }
-                    }else{
                         s.Add("price", 0.0);
                     }
+                    else
+                    {
+                        s["price"] = 0.0;
+                    }
+                }
+                
+            }
+
+            if (statusAPI == true)
+            {
+                while (nrSets != 0) { }
             }
 
             setsDataGridView.AllowUserToAddRows = true;
@@ -165,6 +149,132 @@ namespace YuGiOhCardManager
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        //Metodo per controllare se l'API funziona correttamente o no
+        private bool checkApiLive()
+        {
+            // Stringa Json dalla chiamata Api
+            string jsonStringFromMyApi = "";
+
+            //Chiamata My Api
+            Uri addressMyApi = new Uri($"http://127.0.0.1:8000/iAmLive");
+            HttpWebRequest requestMyApi = WebRequest.Create(addressMyApi) as HttpWebRequest;
+            requestMyApi.Method = "GET";
+            requestMyApi.ContentType = "text/json";
+
+            try
+            {
+                //Salvataggio su "jsonString" della risposta
+                using (HttpWebResponse response = requestMyApi.GetResponse() as HttpWebResponse)
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    jsonStringFromMyApi = reader.ReadToEnd();
+                }
+            }
+            catch (Exception err)
+            {
+                string Message = $"{err.StackTrace}\n{err.Message}";
+                Console.WriteLine(Message);
+
+                return false;
+            }
+
+            //Controllo non sia vuota
+            if (!jsonStringFromMyApi.Replace(" ", "").Equals(""))
+            {
+                try
+                {
+                    //Conversione da Json String a Json
+                    var allJsonFromMyApi = JObject.Parse(jsonStringFromMyApi);
+                    
+                    return Boolean.Parse(allJsonFromMyApi["response"].ToString());
+                }
+                catch (Exception err)
+                {
+                    string Message = $"{err.StackTrace}\n{err.Message}";
+                    Console.WriteLine(Message);
+
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Metodo per controllare se l'API funziona correttamente o no
+        private async void requestPriceAPI(Dictionary<string, object> s)
+        {
+            // Stringa Json dalla chiamata Api
+            string jsonStringFromMyApi = "";
+
+            //Chiamata My Api
+            Uri addressMyApi = new Uri($"http://127.0.0.1:8000/yugioh/searchCard/min/" + s["set"].ToString());
+            HttpWebRequest requestMyApi = WebRequest.Create(addressMyApi) as HttpWebRequest;
+            requestMyApi.Method = "GET";
+            requestMyApi.ContentType = "text/json";
+
+            try
+            {
+                //Salvataggio su "jsonString" della risposta
+                using (HttpWebResponse response = requestMyApi.GetResponse() as HttpWebResponse)
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    jsonStringFromMyApi = reader.ReadToEnd();
+                }
+            }
+            catch (Exception err)
+            {
+                string Message = $"{err.StackTrace}\n{err.Message}";
+                Console.WriteLine(Message);
+            }
+
+            //Controllo non sia vuota
+            if (!jsonStringFromMyApi.Replace(" ", "").Equals(""))
+            {
+                try
+                {
+                    //Conversione da Json String a Json
+                    var allJsonFromMyApi = JObject.Parse(jsonStringFromMyApi);
+                    if (s.ContainsKey("price") == false)
+                    {
+                        s.Add("price", double.Parse(allJsonFromMyApi["price"].ToString()));
+                    }
+                    else
+                    {
+                        s["price"] = double.Parse(allJsonFromMyApi["price"].ToString());
+                    }
+                }
+                catch (Exception err)
+                {
+                    string Message = $"{err.StackTrace}\n{err.Message}";
+                    Console.WriteLine(Message);
+
+                    if (s.ContainsKey("price") == false)
+                    {
+                        s.Add("price", 0.0);
+                    }
+                    else
+                    {
+                        s["price"] = 0.0;
+                    }
+                }
+            }
+            else
+            {
+                if (s.ContainsKey("price") == false)
+                {
+                    s.Add("price", 0.0);
+                }
+                else
+                {
+                    s["price"] = 0.0;
+                }
+            }
+
+            nrSets -= 1;
         }
     }
 }

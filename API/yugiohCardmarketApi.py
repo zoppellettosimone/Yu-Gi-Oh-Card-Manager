@@ -9,12 +9,13 @@ app = FastAPI()
 #Route to find if the API work normally or not
 @app.get("/iAmLive")
 async def root():
+    print("[" + d.now().strftime("%Y-%m-%d %H:%M:%S") + "] iAmLive request")
     return {"response": True}
 
 #Route to search a yugioh card prize
 @app.get("/yugioh/searchCard/{limit}/{textToSearch}")
 async def root(limit, textToSearch):
-    print("Start: " + d.now().strftime("%Y-%m-%d %H:%M:%S"))
+    print("[" + d.now().strftime("%Y-%m-%d %H:%M:%S") + "] Request /yugioh/searchCard/" + limit + "/" + textToSearch)
     newLink = link + textToSearch
     page = requests.get(newLink, headers=headers)
     soup = BeautifulSoup(page.content, 'html.parser')
@@ -31,10 +32,11 @@ async def root(limit, textToSearch):
         #I extract the dd (html) which also contains the price
         mydivs = soup.find_all("dd", {"class": "col-6 col-xl-7"})
         #I only extract the price
-        price = str(mydivs[nr]).replace('<dd class="col-6 col-xl-7">', '').replace('€', '').replace(',', '.').replace(" ","").replace("<span>","").replace("</span>","").replace("</div>","").replace("</dd>","")
-        print("Price:", price + " ---> " + d.now().strftime("%Y-%m-%d %H:%M:%S"))
+        price = str(mydivs[nr]).replace('<dd class="col-6 col-xl-7">', '').replace('€', '').replace(',', '.').replace(" ","").replace("<span>","").replace("</span>","").replace("</div>","").replace("</dd>","").replace("£","")
+        print("[" + d.now().strftime("%Y-%m-%d %H:%M:%S") + "] Response Price: " + price)
         return {"price": double(price)}
     except:
+        print("[" + d.now().strftime("%Y-%m-%d %H:%M:%S") + "] Response Error with price search")
         return {"price": 0}
 
 def findMinNumber(arr):
